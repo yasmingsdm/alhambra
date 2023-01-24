@@ -1,0 +1,31 @@
+/*Reset style and general style */
+:root{
+    --background-1: #FBC252;
+    --background-2: #F0ECCF;
+    --background-3: #A3BB98;
+    --color-text: #5C0000
+}
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+/* Header */
+header{
+    background-color: var(--background-1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+img{
+    width:300px
+}
+
+h1{
+    color: var(--color-text)
+}
