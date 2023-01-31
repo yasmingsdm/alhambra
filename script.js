@@ -21,7 +21,7 @@ const redPlayerRow = document.getElementById('redPlayerRow');
 
 playerBlue.onclick = ()=>{
     bluePlayerRow.style.display = 'block';
-    //import ('./playerblue'); //need to fix it
+    import ('./playerblue.js');
 };
 
 playerWhite.onclick = ()=>{
@@ -43,7 +43,3 @@ playerGreen.onclick = ()=>{
 playerRed.onclick = ()=>{
     redPlayerRow.style.display = 'block';
 };
-
-//Mistake:
-
-//Play again:
