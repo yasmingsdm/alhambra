@@ -125,6 +125,9 @@ td{
     padding: 5px;
 }
 
+#bluePlayerRow, #whitePlayerRow, #orangePlayerRow, #yellowPlayerRow, #greenPlayerRow, #redPlayerRow{
+    display:none;
+}
 /*Points*/
 .point{
     border: 2px solid var(--color-text);

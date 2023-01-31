@@ -17,12 +17,12 @@
         <section class="players">
             <h2>Who will play?</h2>
             <div class="players__btn">
-                <button class="player blue"></button>
-                <button class="player white"></button>
-                <button class="player orange"></button>
-                <button class="player yellow"></button>
-                <button class="player green"></button>
-                <button class="player red"></button>
+                <button class="player blue" id="playerBlue"></button>
+                <button class="player white" id="playerWhite"></button>
+                <button class="player orange" id="playerOrange"></button>
+                <button class="player yellow" id="playerYellow"></button>
+                <button class="player green" id="playerGreen"></button>
+                <button class="player red" id="playerRed"></button>
             </div>
         </section>
         <section class="points">
@@ -37,69 +37,69 @@
                     <th>C - 3rd place</th>
                     <th>Total</th>
                 </tr>
-                <tr>
+                <tr id="bluePlayerRow">
                     <td><div class="player blue"></div></td>
                     <!--Points A-->
                     <td>
-                        <button class="point blue"></button>
-                        <button class="point red"></button>
-                        <button class="point brown"></button>
-                        <button class="point white"></button>
-                        <button class="point green"></button>
-                        <button class="point purple"></button>
+                        <button class="point blue" id="blueA-blue"></button>
+                        <button class="point red" id="redA-blue"></button>
+                        <button class="point brown" id="brownA-blue"></button>
+                        <button class="point white" id="whiteA-blue"></button>
+                        <button class="point green" id="greenA-blue"></button>
+                        <button class="point purple" id="purpleA-blue"></button>
                     </td>
                     <!--Points B1-->
                     <td>
-                        <button class="point blue"></button>
-                        <button class="point red"></button>
-                        <button class="point brown"></button>
-                        <button class="point white"></button>
-                        <button class="point green"></button>
-                        <button class="point purple"></button>
+                        <button class="point blue" id="blueB1-blue"></button>
+                        <button class="point red" id="redB1-blue"></button>
+                        <button class="point brown" id="brownB1-blue"></button>
+                        <button class="point white" id="whiteB1-blue"></button>
+                        <button class="point green" id="greenB1-blue"></button>
+                        <button class="point purple" id="purpleB1-blue"></button>
                     </td>
                     <!--Points B2-->
                     <td>
-                        <button class="point blue"></button>
-                        <button class="point red"></button>
-                        <button class="point brown"></button>
-                        <button class="point white"></button>
-                        <button class="point green"></button>
-                        <button class="point purple"></button>
+                        <button class="point blue" id="blueB2-blue"></button>
+                        <button class="point red" id="redB2-blue"></button>
+                        <button class="point brown" id="brownB2-blue"></button>
+                        <button class="point white" id="whiteB2-blue"></button>
+                        <button class="point green" id="greenB2-blue"></button>
+                        <button class="point purple" id="purpleB2-blue"></button>
                     </td>
                     <!--Points C1-->
                     <td>
-                        <button class="point blue"></button>
-                        <button class="point red"></button>
-                        <button class="point brown"></button>
-                        <button class="point white"></button>
-                        <button class="point green"></button>
-                        <button class="point purple"></button>
+                        <button class="point blue" id="blueC1-blue"></button>
+                        <button class="point red" id="redC1-blue"></button>
+                        <button class="point brown" id="brownC1-blue"></button>
+                        <button class="point white" id="whiteC1-blue"></button>
+                        <button class="point green" id="greenC1-blue"></button>
+                        <button class="point purple" id="purpleC1-blue"></button>
                     </td>
                     <!--Points C2-->
                     <td>
-                        <button class="point blue"></button>
-                        <button class="point red"></button>
-                        <button class="point brown"></button>
-                        <button class="point white"></button>
-                        <button class="point green"></button>
-                        <button class="point purple"></button>
+                        <button class="point blue" id="blueC2-blue"></button>
+                        <button class="point red" id="redC2-blue"></button>
+                        <button class="point brown" id="brownC2-blue"></button>
+                        <button class="point white" id="whiteC2-blue"></button>
+                        <button class="point green" id="greenC2-blue"></button>
+                        <button class="point purple" id="purpleC2-blue"></button>
                     </td>
                     <!--Points C3-->
                     <td>
-                        <button class="point blue"></button>
-                        <button class="point red"></button>
-                        <button class="point brown"></button>
-                        <button class="point white"></button>
-                        <button class="point green"></button>
-                        <button class="point purple"></button>
+                        <button class="point blue" id="blueC3-blue"></button>
+                        <button class="point red" id="redC3-blue"></button>
+                        <button class="point brown" id="brownC3-blue"></button>
+                        <button class="point white" id="whiteC3-blue"></button>
+                        <button class="point green" id="greenC3-blue"></button>
+                        <button class="point purple" id="purpleC3-blue"></button>
                     </td>
                     <td id="totalBlue"></td>
                 </tr>
-                <tr>
+                <tr id="whitePlayerRow">
                     <td><div class="player white"></div></td>
                     <!--Points A-->
                     <td>
-                        <button class="point blue"></button>
+                        <button class="point blue" id="blueA-white"></button>
                         <button class="point red"></button>
                         <button class="point brown"></button>
                         <button class="point white"></button>
@@ -153,7 +153,7 @@
                     </td>
                     <td id="totalWhite"></td>
                 </tr>
-                <tr>
+                <tr id="orangePlayerRow">
                     <td><div class="player orange"></div></td>
                     <!--Points A-->
                     <td>
@@ -211,7 +211,7 @@
                     </td>
                     <td id="totalOrange"></td>
                 </tr>
-                <tr>
+                <tr id="yellowPlayerRow">
                     <td><div class="player yellow"></div></td>
                     <!--Points A-->
                     <td>
@@ -269,7 +269,7 @@
                     </td>
                     <td id="totalYellow"></td>
                 </tr>
-                <tr>
+                <tr id="greenPlayerRow">
                     <td><div class="player green"></div></td>
                     <!--Points A-->
                     <td>
@@ -327,7 +327,7 @@
                     </td>
                     <td id="totalGreen"></td>
                 </tr>
-                <tr>
+                <tr id="redPlayerRow">
                     <td><div class="player red"></div></td>
                     <!--Points A-->
                     <td>
@@ -391,5 +391,6 @@
 
     </main>
     <footer>Created by <a href="https://github.com/yasmingsdm">Yasmin Dal Medico</a></footer>
+    <script type="module" src="./script.js"></script>
 </body>
 </html>
