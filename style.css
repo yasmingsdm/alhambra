@@ -118,11 +118,11 @@ th, td{
 }
 
 th{
-    padding: 30px;
+    width: 180px;
 }
 
 td{
-    padding: 5px;
+    width:180px;
 }
 
 #bluePlayerRow, #whitePlayerRow, #orangePlayerRow, #yellowPlayerRow, #greenPlayerRow, #redPlayerRow{
