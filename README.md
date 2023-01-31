@@ -4,11 +4,11 @@ This project goal's was to create webpage that count the points while you play t
 
 I used HTML, CSS and JavaScript.
 
-####What I've practiced/learned:
-Range and radio input (HTML);
-Style range input (CSS);
+#### What I've practiced/learned:
+
+- Flexbox (CSS);
 Responsive design (CSS);
-Grid display(CSS);
+- Variables(CSS);
 Switch (JavaScript);
 Prevent to refresh the page (JavaScript);
 Arrays (JavaScript);
