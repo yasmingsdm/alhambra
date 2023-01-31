@@ -29,18 +29,18 @@
             <table>
                 <tr>
                     <th>Player</th>
-                    <th>A</th>
-                    <th>B - 1st place</th>
-                    <th>B - 2nd place</th>
-                    <th>C - 1st place</th>
-                    <th>C - 2nd place</th>
-                    <th>C - 3rd place</th>
+                    <th class="column-a">A</th>
+                    <th class="column-b1">B - 1st place</th>
+                    <th class="column-b2">B - 2nd place</th>
+                    <th class="column-c1">C - 1st place</th>
+                    <th class="column-c2">C - 2nd place</th>
+                    <th class="column-c3">C - 3rd place</th>
                     <th>Total</th>
                 </tr>
                 <tr id="bluePlayerRow">
                     <td><div class="player blue"></div></td>
                     <!--Points A-->
-                    <td>
+                    <td class="column-a">
                         <button class="point blue" id="blueA-blue"></button>
                         <button class="point red" id="redA-blue"></button>
                         <button class="point brown" id="brownA-blue"></button>
@@ -49,7 +49,7 @@
                         <button class="point purple" id="purpleA-blue"></button>
                     </td>
                     <!--Points B1-->
-                    <td>
+                    <td class="column-b1">
                         <button class="point blue" id="blueB1-blue"></button>
                         <button class="point red" id="redB1-blue"></button>
                         <button class="point brown" id="brownB1-blue"></button>
@@ -58,7 +58,7 @@
                         <button class="point purple" id="purpleB1-blue"></button>
                     </td>
                     <!--Points B2-->
-                    <td>
+                    <td class="column-b2">
                         <button class="point blue" id="blueB2-blue"></button>
                         <button class="point red" id="redB2-blue"></button>
                         <button class="point brown" id="brownB2-blue"></button>
@@ -67,7 +67,7 @@
                         <button class="point purple" id="purpleB2-blue"></button>
                     </td>
                     <!--Points C1-->
-                    <td>
+                    <td class="column-c1">
                         <button class="point blue" id="blueC1-blue"></button>
                         <button class="point red" id="redC1-blue"></button>
                         <button class="point brown" id="brownC1-blue"></button>
@@ -76,7 +76,7 @@
                         <button class="point purple" id="purpleC1-blue"></button>
                     </td>
                     <!--Points C2-->
-                    <td>
+                    <td class="column-c2">
                         <button class="point blue" id="blueC2-blue"></button>
                         <button class="point red" id="redC2-blue"></button>
                         <button class="point brown" id="brownC2-blue"></button>
@@ -85,7 +85,7 @@
                         <button class="point purple" id="purpleC2-blue"></button>
                     </td>
                     <!--Points C3-->
-                    <td>
+                    <td class="column-c3">
                         <button class="point blue" id="blueC3-blue"></button>
                         <button class="point red" id="redC3-blue"></button>
                         <button class="point brown" id="brownC3-blue"></button>
@@ -98,7 +98,7 @@
                 <tr id="whitePlayerRow">
                     <td><div class="player white"></div></td>
                     <!--Points A-->
-                    <td>
+                    <td class="column-a">
                         <button class="point blue" id="blueA-white"></button>
                         <button class="point red"></button>
                         <button class="point brown"></button>
@@ -107,7 +107,7 @@
                         <button class="point purple"></button>
                     </td>
                     <!--Points B1-->
-                    <td>
+                    <td class="column-b1">
                         <button class="point blue"></button>
                         <button class="point red"></button>
                         <button class="point brown"></button>
@@ -116,7 +116,7 @@
                         <button class="point purple"></button>
                     </td>
                     <!--Points B2-->
-                    <td>
+                    <td class="column-b2">
                         <button class="point blue"></button>
                         <button class="point red"></button>
                         <button class="point brown"></button>
@@ -125,7 +125,7 @@
                         <button class="point purple"></button>
                     </td>
                     <!--Points C1-->
-                    <td>
+                    <td class="column-c1">
                         <button class="point blue"></button>
                         <button class="point red"></button>
                         <button class="point brown"></button>
@@ -134,7 +134,7 @@
                         <button class="point purple"></button>
                     </td>
                     <!--Points C2-->
-                    <td>
+                    <td class="column-c2">
                         <button class="point blue"></button>
                         <button class="point red"></button>
                         <button class="point brown"></button>
@@ -143,7 +143,7 @@
                         <button class="point purple"></button>
                     </td>
                     <!--Points C3-->
-                    <td>
+                    <td class="column-c3">
                         <button class="point blue"></button>
                         <button class="point red"></button>
                         <button class="point brown"></button>
@@ -156,7 +156,7 @@
                 <tr id="orangePlayerRow">
                     <td><div class="player orange"></div></td>
                     <!--Points A-->
-                    <td>
+                    <td class="column-a">
                         <button class="point blue"></button>
                         <button class="point red"></button>
                         <button class="point brown"></button>
@@ -165,7 +165,7 @@
                         <button class="point purple"></button>
                     </td>
                     <!--Points B1-->
-                    <td>
+                    <td class="column-b1">
                         <button class="point blue"></button>
                         <button class="point red"></button>
                         <button class="point brown"></button>
@@ -174,7 +174,7 @@
                         <button class="point purple"></button>
                     </td>
                     <!--Points B2-->
-                    <td>
+                    <td class="column-b2">
                         <button class="point blue"></button>
                         <button class="point red"></button>
                         <button class="point brown"></button>
@@ -183,7 +183,7 @@
                         <button class="point purple"></button>
                     </td>
                     <!--Points C1-->
-                    <td>
+                    <td class="column-c1">
                         <button class="point blue"></button>
                         <button class="point red"></button>
                         <button class="point brown"></button>
@@ -192,7 +192,7 @@
                         <button class="point purple"></button>
                     </td>
                     <!--Points C2-->
-                    <td>
+                    <td class="column-c2">
                         <button class="point blue"></button>
                         <button class="point red"></button>
                         <button class="point brown"></button>
@@ -201,7 +201,7 @@
                         <button class="point purple"></button>
                     </td>
                     <!--Points C3-->
-                    <td>
+                    <td class="column-c3">
                         <button class="point blue"></button>
                         <button class="point red"></button>
                         <button class="point brown"></button>
@@ -214,7 +214,7 @@
                 <tr id="yellowPlayerRow">
                     <td><div class="player yellow"></div></td>
                     <!--Points A-->
-                    <td>
+                    <td class="column-a">
                         <button class="point blue"></button>
                         <button class="point red"></button>
                         <button class="point brown"></button>
@@ -223,7 +223,7 @@
                         <button class="point purple"></button>
                     </td>
                     <!--Points B1-->
-                    <td>
+                    <td class="column-b1">
                         <button class="point blue"></button>
                         <button class="point red"></button>
                         <button class="point brown"></button>
@@ -232,7 +232,7 @@
                         <button class="point purple"></button>
                     </td>
                     <!--Points B2-->
-                    <td>
+                    <td class="column-b2">
                         <button class="point blue"></button>
                         <button class="point red"></button>
                         <button class="point brown"></button>
@@ -241,7 +241,7 @@
                         <button class="point purple"></button>
                     </td>
                     <!--Points C1-->
-                    <td>
+                    <td class="column-c1">
                         <button class="point blue"></button>
                         <button class="point red"></button>
                         <button class="point brown"></button>
@@ -250,7 +250,7 @@
                         <button class="point purple"></button>
                     </td>
                     <!--Points C2-->
-                    <td>
+                    <td class="column-c2">
                         <button class="point blue"></button>
                         <button class="point red"></button>
                         <button class="point brown"></button>
@@ -259,7 +259,7 @@
                         <button class="point purple"></button>
                     </td>
                     <!--Points C3-->
-                    <td>
+                    <td class="column-c3">
                         <button class="point blue"></button>
                         <button class="point red"></button>
                         <button class="point brown"></button>
@@ -272,7 +272,7 @@
                 <tr id="greenPlayerRow">
                     <td><div class="player green"></div></td>
                     <!--Points A-->
-                    <td>
+                    <td class="column-a">
                         <button class="point blue"></button>
                         <button class="point red"></button>
                         <button class="point brown"></button>
@@ -281,7 +281,7 @@
                         <button class="point purple"></button>
                     </td>
                     <!--Points B1-->
-                    <td>
+                    <td class="column-b1">
                         <button class="point blue"></button>
                         <button class="point red"></button>
                         <button class="point brown"></button>
@@ -290,7 +290,7 @@
                         <button class="point purple"></button>
                     </td>
                     <!--Points B2-->
-                    <td>
+                    <td class="column-b2">
                         <button class="point blue"></button>
                         <button class="point red"></button>
                         <button class="point brown"></button>
@@ -299,7 +299,7 @@
                         <button class="point purple"></button>
                     </td>
                     <!--Points C1-->
-                    <td>
+                    <td class="column-c1">
                         <button class="point blue"></button>
                         <button class="point red"></button>
                         <button class="point brown"></button>
@@ -308,7 +308,7 @@
                         <button class="point purple"></button>
                     </td>
                     <!--Points C2-->
-                    <td>
+                    <td class="column-c2">
                         <button class="point blue"></button>
                         <button class="point red"></button>
                         <button class="point brown"></button>
@@ -317,7 +317,7 @@
                         <button class="point purple"></button>
                     </td>
                     <!--Points C3-->
-                    <td>
+                    <td class="column-c3">
                         <button class="point blue"></button>
                         <button class="point red"></button>
                         <button class="point brown"></button>
@@ -330,7 +330,7 @@
                 <tr id="redPlayerRow">
                     <td><div class="player red"></div></td>
                     <!--Points A-->
-                    <td>
+                    <td class="column-a">
                         <button class="point blue"></button>
                         <button class="point red"></button>
                         <button class="point brown"></button>
@@ -339,7 +339,7 @@
                         <button class="point purple"></button>
                     </td>
                     <!--Points B1-->
-                    <td>
+                    <td class="column-b1">
                         <button class="point blue"></button>
                         <button class="point red"></button>
                         <button class="point brown"></button>
@@ -348,7 +348,7 @@
                         <button class="point purple"></button>
                     </td>
                     <!--Points B2-->
-                    <td>
+                    <td class="column-b2">
                         <button class="point blue"></button>
                         <button class="point red"></button>
                         <button class="point brown"></button>
@@ -357,7 +357,7 @@
                         <button class="point purple"></button>
                     </td>
                     <!--Points C1-->
-                    <td>
+                    <td class="column-c1">
                         <button class="point blue"></button>
                         <button class="point red"></button>
                         <button class="point brown"></button>
@@ -366,7 +366,7 @@
                         <button class="point purple"></button>
                     </td>
                     <!--Points C2-->
-                    <td>
+                    <td class="column-c2">
                         <button class="point blue"></button>
                         <button class="point red"></button>
                         <button class="point brown"></button>
@@ -375,7 +375,7 @@
                         <button class="point purple"></button>
                     </td>
                     <!--Points C3-->
-                    <td>
+                    <td class="column-c3">
                         <button class="point blue"></button>
                         <button class="point red"></button>
                         <button class="point brown"></button>
@@ -392,5 +392,6 @@
     </main>
     <footer>Created by <a href="https://github.com/yasmingsdm">Yasmin Dal Medico</a></footer>
     <script type="module" src="./script.js"></script>
+    <script src="./playerblue.js"></script>
 </body>
 </html>

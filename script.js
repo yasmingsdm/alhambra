@@ -19,7 +19,6 @@ const redPlayerRow = document.getElementById('redPlayerRow');
 
 // Display the rows:
 
-//NEED to fix layout
 playerBlue.onclick = ()=>{
     bluePlayerRow.style.display = 'block';
     //import ('./playerblue'); //need to fix it
@@ -44,3 +43,7 @@ playerGreen.onclick = ()=>{
 playerRed.onclick = ()=>{
     redPlayerRow.style.display = 'block';
 };
+
+//Mistake:
+
+//Play again:
