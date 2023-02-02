@@ -24,10 +24,36 @@
                 <button class="player green" id="playerGreen"></button>
                 <button class="player red" id="playerRed"></button>
             </div>
+            <div class="phase-container">
+                <div>
+                <label for="phase-a">Phase A</label><br>
+                <input type="checkbox" class="phase" id="phase-a" checked>
+                </div>
+                <div>
+                    <label for="phase-a">Phase B-1</label><br>
+                    <input type="checkbox" class="phase" id="phase-a">
+                </div>
+                <div>
+                    <label for="phase-a">Phase B-2</label><br>
+                    <input type="checkbox" class="phase" id="phase-a">
+                </div>
+                <div>
+                    <label for="phase-a">Phase C-1</label><br>
+                    <input type="checkbox" class="phase" id="phase-a">
+                </div>
+                <div>
+                    <label for="phase-a">Phase C-2</label><br>
+                    <input type="checkbox" class="phase" id="phase-a">
+                </div>
+                <div>
+                    <label for="phase-a">Phase C-3</label><br>
+                    <input type="checkbox" class="phase" id="phase-a">
+                </div>
+            </div>
         </section>
         <section class="points">
-                <div id="bluePlayerRow">
-                    <div class="player blue"></div>
+                <div class="player-column" id="bluePlayerRow">
+                    <div class="player blue"><div id="totalBlue"></div></div>
                     <!--Points A-->
                     <div class="scores column-a">
                         <button class="point blue" id="blueA-blue"></button>
@@ -82,10 +108,10 @@
                         <button class="point green" id="greenC3-blue"></button>
                         <button class="point purple" id="purpleC3-blue"></button>
                     </div>
-                    <div id="totalBlue"></div>
+                    
                 </div>
-                <div id="whitePlayerRow">
-                    <div class="player white"></div>
+                <div class="player-column" id="whitePlayerRow">
+                    <div class="player white"><div id="totalWhite"></div></div>
                     <!--Points A-->
                     <div class="scores column-a">
                         <button class="point blue" id="blueA-white"></button>
@@ -140,10 +166,10 @@
                         <button class="point green"></button>
                         <button class="point purple"></button>
                     </div>
-                    <div id="totalWhite"></div>
+
                 </div>
-                <div id="orangePlayerRow">
-                    <div><div class="player orange"></div></div>
+                <div class="player-column" id="orangePlayerRow">
+                    <div class="player orange"><div id="totalOrange"></div></div>
                     <!--Points A-->
                     <div class="scores column-a">
                         <button class="point blue"></button>
@@ -198,10 +224,10 @@
                         <button class="point green"></button>
                         <button class="point purple"></button>
                     </div>
-                    <div id="totalOrange"></div>
+                    
                 </div>
-                <div id="yellowPlayerRow">
-                    <div><div class="player yellow"></div></div>
+                <div class="player-column" id="yellowPlayerRow">
+                    <div class="player yellow"><div id="totalYellow"></div></div>
                     <!--Points A-->
                     <div class="scores column-a">
                         <button class="point blue"></button>
@@ -256,10 +282,10 @@
                         <button class="point green"></button>
                         <button class="point purple"></button>
                     </div>
-                    <div id="totalYellow"></div>
+                    
                 </div>
-                <div id="greenPlayerRow">
-                    <div><div class="player green"></div></div>
+                <div class="player-column" id="greenPlayerRow">
+                    <div class="player green"><div id="totalGreen"></div></div>
                     <!--Points A-->
                     <div class="scores column-a">
                         <button class="point blue"></button>
@@ -314,10 +340,10 @@
                         <button class="point green"></button>
                         <button class="point purple"></button>
                     </div>
-                    <div id="totalGreen"></div>
+                    
                 </div>
-                <div id="redPlayerRow">
-                    <div><div class="player red"></div></div>
+                <div class="player-column" id="redPlayerRow">
+                    <div class="player red"><div id="totalRed"></div></div>
                     <!--Points A-->
                     <div class="scores column-a">
                         <button class="point blue"></button>
@@ -372,7 +398,7 @@
                         <button class="point green"></button>
                         <button class="point purple"></button>
                     </div>
-                    <div id="totalRed"></div>
+                    
                 </div>
         </section>
     </main>
