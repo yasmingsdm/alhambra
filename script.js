@@ -43,3 +43,24 @@ playerGreen.onclick = ()=>{
 playerRed.onclick = ()=>{
     redPlayerRow.style.display = 'block';
 };
+
+
+//Radio button functionality
+
+// add an event listener for the change event
+const radioButtons = document.querySelectorAll('input[name="phase"]');
+for(const radioButton of radioButtons){
+    radioButton.addEventListener('change', showSelected);
+}        
+
+function showSelected(e) {
+    if (this.checked && this.value === "a") {
+       const columnA = document.getElementsByClassName("column-a");
+       columnA.classList.add("show");
+        console.log("It worked with a")
+    } else if (this.checked && this.value === "b") {
+        console.log("It worked with b")
+    } else {
+        console.log("It worked with c")
+    }
+}
