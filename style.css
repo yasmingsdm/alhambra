@@ -99,40 +99,31 @@ h2{
     background-color: var(--yellow);
 }
 
-/* Table*/
-
-.points{
-    background-color: var(--background-2);
-}
-table{
-    color: var(--color-text);
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    
-}
-th, td{
-    border: 2px solid var(--color-text);
-    border-collapse: collapse;
-}
-
-th{
-    width: 180px;
-}
-
-td{
-    width:180px;
-}
-
 #bluePlayerRow, #whitePlayerRow, #orangePlayerRow, #yellowPlayerRow, #greenPlayerRow, #redPlayerRow{
     display:none;
 }
 /*Points*/
+
+.points{
+    background-color: var(--background-2);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3em;
+    justify-content: center;
+}
+
+.scores {
+    display: grid;
+    gap: 1em;
+}
+
 .point{
     border: 2px solid var(--color-text);
-    width: 20px;
-    height: 20px;
+    width: auto;
+    height: 40px;
+}
+.column-b1, .column-b2, .column-c1, .column-c2, .column-c3 {
+    display:none;
 }
 
 .brown{
