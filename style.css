@@ -22,7 +22,7 @@
 }
 
 body{
-    background-color: rgba(92,0,0, 0.6)
+    background-color: rgba(92,0,0, 0.6);
 }
 
 button, a{
@@ -47,6 +47,11 @@ h1{
     color: var(--color-text);
     padding: 10px;
 }
+/* Main */
+
+main {
+    min-height: 70vh;
+}
 
 /* Players */
 
@@ -59,13 +64,13 @@ h1{
 h2{
     color: var(--color-text);
     text-align: center;
-    margin-top: 30px;
     padding: 10px;
 }
 
 .players__btn{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     margin: 20px;
     padding:10px;
 }
@@ -78,6 +83,7 @@ h2{
     border-radius: 50%;
     border: 4px solid var(--color-text);
     margin:5px auto;
+    padding: 10px;
 }
 
 .blue{
@@ -105,7 +111,52 @@ h2{
 }
 
 #bluePlayerRow, #whitePlayerRow, #orangePlayerRow, #yellowPlayerRow, #greenPlayerRow, #redPlayerRow{
+    border-radius:5px;
+    padding:5px;
+}
+
+#bluePlayerRow {
+    border: 8px solid var(--blue);
+    box-shadow: 0px 2px 5px var(--blue);
+    color: var(--blue);
+}
+#whitePlayerRow {
+    border: 8px solid var(--white);
+    box-shadow: 0px 2px 5px var(--white);
+    color: var(--white);
+}
+
+#orangePlayerRow {
+    border: 8px solid var(--orange);
+    box-shadow: 0px 2px 5px var(--orange);
+    color: var(--orange);
+}
+#yellowPlayerRow {
+    border: 8px solid var(--yellow);
+    box-shadow: 0px 2px 5px var(--yellow);
+    color: var(--yellow);
+}
+#greenPlayerRow {
+    border: 8px solid var(--green);
+    box-shadow: 0px 2px 5px var(--green);
+    color: var(--green);
+}
+#redPlayerRow {
+    border: 8px solid var(--red);
+    box-shadow: 0px 2px 5px var(--red);
+    color: var(--red);
+}
+
+#bluePlayerRow, #whitePlayerRow, #orangePlayerRow, #yellowPlayerRow, #greenPlayerRow, #redPlayerRow{
     display:none;
+}
+
+.total-container {
+    width: 220px;
+    text-align: center;
+    font-size: 4em;
+    font-weight: 800;
+    text-shadow: 0px 0px 5px black;
 }
 
 
@@ -115,14 +166,44 @@ h2{
     display: flex;
     justify-content: center;
 }
-
-input[type=checkbox] {
-    width: 80px;
-    border: 2px solid black;
-
+.phase-container div {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: start;
+    width: 50px;
+    align-items: center;
+    font-size: 1.5em;
 }
 
 /*Points*/
+
+.scores > div {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 0 2px;
+}
+.scores > div > button{
+width: 90%;
+}
+
+.column-a {
+    display: grid;
+    gap: 0.25rem;
+}
+.column-b {
+    display: grid;
+    gap: 0.25rem;
+}
+.column-c {
+    display: grid;
+    gap: 0.25rem;
+}
+.hide {
+    display: none;
+}
+.show {
+    display: contents }
 
 .points{
     background-color: var(--background-2);
@@ -130,21 +211,14 @@ input[type=checkbox] {
     flex-wrap: wrap;
     gap: 3em;
     justify-content: center;
-}
-
-.scores {
-    display: grid;
-    gap: 0.5em;
+    padding-top: 20px;
 }
 
 .point{
-    border: 2px solid var(--color-text);
-    width: 200px;
+    border: 1px solid var(--color-text);
     height: 40px;
 }
-.column-b1, .column-b2, .column-c1, .column-c2, .column-c3 {
-    display:none;
-}
+
 
 .brown{
     background-color: var(--brown);
