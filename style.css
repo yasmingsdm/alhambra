@@ -180,11 +180,14 @@ h2{
 .scores > div {
     display: flex;
     justify-content: space-between;
-    flex-direction: column;
     padding: 0 2px;
 }
 .scores > div > button{
 width: 90%;
+}
+
+.hide {
+    display: none;
 }
 
 .column-a {
@@ -199,12 +202,6 @@ width: 90%;
     display: grid;
     gap: 0.25rem;
 }
-.hide {
-    display: none;
-}
-.show {
-    display: contents }
-
 .points{
     background-color: var(--background-2);
     display: flex;
