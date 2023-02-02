@@ -1,10 +1,10 @@
 //Id columns:
-const columnA = document.getElementsByClassName('column-a');
-const columnB1 = document.getElementsByClassName('column-b1');
-const columnB2 = document.getElementsByClassName('column-b2');
-const columnC1 = document.getElementsByClassName('column-c1');
-const columnC2 = document.getElementsByClassName('column-c2');
-const columnC3 = document.getElementsByClassName('column-c3');
+// const columnA = document.getElementsByClassName('column-a');
+// const columnB1 = document.getElementsByClassName('column-b1');
+// const columnB2 = document.getElementsByClassName('column-b2');
+// const columnC1 = document.getElementsByClassName('column-c1');
+// const columnC2 = document.getElementsByClassName('column-c2');
+// const columnC3 = document.getElementsByClassName('column-c3');
 
 
 // Id-points player blue:
@@ -55,77 +55,8 @@ const totalBlue= document.getElementById('totalBlue');
 
 // Functions points for blue player:
 
-const blue1= ()=>{
-    bluePoint+=1;
-    totalBlue.innerHTML = bluePoint;
-}
-const red2 = ()=>{
-    bluePoint+=2;
-    totalBlue.innerHTML = bluePoint;
-}
-
-const brown3= ()=>{
-    bluePoint+=3;
-    totalBlue.innerHTML = bluePoint;
-}
-
-const white4 = ()=>{
-    bluePoint+=4;
-    totalBlue.innerHTML = bluePoint;
-}
-
-const green5 = ()=>{
-    bluePoint+=5;
-    totalBlue.innerHTML = bluePoint;
-}
-
-const blue8 = ()=>{
-    bluePoint+=8;
-    totalBlue.innerHTML = bluePoint;
-}
-
-const red9 = ()=>{
-    bluePoint+=9;
-    totalBlue.innerHTML = bluePoint;
-}
-
-const brown10 = ()=>{
-    bluePoint+=10;
-    totalBlue.innerHTML = bluePoint;
-}
-
-const white11 = ()=>{
-    bluePoint+=11;
-    totalBlue.innerHTML = bluePoint;
-}
-
-const green12 = ()=>{
-    bluePoint+=12;
-    totalBlue.innerHTML = bluePoint;
-}
-
-const blue16 = ()=>{
-    bluePoint+=16;
-    totalBlue.innerHTML = bluePoint;
-}
-
-const red17 = ()=>{
-    bluePoint+=17;
-    totalBlue.innerHTML = bluePoint;
-}
-
-const brown18 = ()=>{
-    bluePoint+=18;
-    totalBlue.innerHTML = bluePoint;
-}
-
-const white19 = ()=>{
-    bluePoint+=19;
-    totalBlue.innerHTML = bluePoint;
-}
-
-const green20 = ()=>{
-    bluePoint+=20;
+const points= value=>{
+    bluePoint+=value;
     totalBlue.innerHTML = bluePoint;
 }
 
@@ -133,80 +64,44 @@ const green20 = ()=>{
 
 let bluePoint = 0;
 
-blueABlue.onclick = blue1;
-redABlue.onclick = red2;
-brownABlue.onclick = brown3;
-whiteABlue.onclick = white4;
-greenABlue.onclick = green5;
-purpleABlue.onclick = ()=>{
-    bluePoint+=6;
-    totalBlue.innerHTML = bluePoint;
-    for (i=0; i<columnA.length;i++){
-        columnA[i].style.display ='none';
-    }
-};
+blueABlue.onclick = points(1);
+redABlue.onclick = points(2);
+brownABlue.onclick = points(3);
+whiteABlue.onclick = points(4);
+greenABlue.onclick = points(5);
+purpleABlue.onclick = points(6);
 
-blueB1Blue.onclick = blue8;
-redB1Blue.onclick = red9; 
-brownB1Blue.onclick = brown10;
-whiteB1Blue.onclick = white11;
-greenB1Blue.onclick = green12;
-purpleB1Blue.onclick  = ()=>{
-    bluePoint+=13;
-    totalBlue.innerHTML = bluePoint;
-    for (i=0; i<columnB1.length;i++){
-        columnB1[i].style.display ='none';
-    }
-};
+blueB1Blue.onclick = points(8);
+redB1Blue.onclick = points(9); 
+brownB1Blue.onclick = points(10);
+whiteB1Blue.onclick = points(11);
+greenB1Blue.onclick = points(12);
+purpleB1Blue.onclick = points(13);
 
-blueB2Blue.onclick = blue1;
-redB2Blue.onclick = red2;
-brownB2Blue.onclick = brown3;
-whiteB2Blue.onclick = white4;
-greenB2Blue.onclick = green5;
-purpleB2Blue.onclick = ()=>{
-    bluePoint+=6;
-    totalBlue.innerHTML = bluePoint;
-    for (i=0; i<columnA.length;i++){
-        columnB2[i].style.display ='none';
-    }
-};
+blueB2Blue.onclick = points(1);
+redB2Blue.onclick = points(2);
+brownB2Blue.onclick = points(3);
+whiteB2Blue.onclick = points(4);
+greenB2Blue.onclick = points(5);
+purpleB2Blue.onclick = points(6);
 
-blueC1Blue.onclick = blue16;
-redC1Blue.onclick = red17; 
-brownC1Blue.onclick = brown18;
-whiteC1Blue.onclick = white19;
-greenC1Blue.onclick = green20;
-purpleC1Blue.onclick  = ()=>{
-    bluePoint+=20;
-    totalBlue.innerHTML = bluePoint;
-    for (i=0; i<columnB1.length;i++){
-        columnC1[i].style.display ='none';
-    }
-};
+blueC1Blue.onclick = points(16);
+redC1Blue.onclick = points(17); 
+brownC1Blue.onclick = points(18);
+whiteC1Blue.onclick = points(19);
+greenC1Blue.onclick = points(20);
+purpleC1Blue.onclick = points(21);
 
-blueC2Blue.onclick = blue8;
-redC2Blue.onclick = red9; 
-brownC2Blue.onclick = brown10;
-whiteC2Blue.onclick = white11;
-greenC2Blue.onclick = green12;
-purpleC2Blue.onclick  = ()=>{
-    bluePoint+=13;
-    totalBlue.innerHTML = bluePoint;
-    for (i=0; i<columnB1.length;i++){
-        columnC2[i].style.display ='none';
-    }
-};
+blueC2Blue.onclick = points(8);
+redC2Blue.onclick = points(9); 
+brownC2Blue.onclick = points(10);
+whiteC2Blue.onclick = points(11);
+greenC2Blue.onclick = points(12);
+purpleC2Blue.onclick = points(13);
 
-blueC3Blue.onclick = blue1;
-redC3Blue.onclick = red2;
-brownC3Blue.onclick = brown3;
-whiteC3Blue.onclick = white4;
-greenC3Blue.onclick = green5;
-purpleC3Blue.onclick = ()=>{
-    bluePoint+=6;
-    totalBlue.innerHTML = bluePoint;
-    for (i=0; i<columnA.length;i++){
-        columnC3[i].style.display ='none';
-    }
-};
+blueC3Blue.onclick = points(1);
+redC3Blue.onclick = points(2);
+brownC3Blue.onclick = points(3);
+whiteC3Blue.onclick = points(4);
+greenC3Blue.onclick = points(5);
+purpleC3Blue.onclick = points(6);
