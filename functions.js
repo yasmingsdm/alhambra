@@ -9,10 +9,10 @@ const points= (value, player)=>{
         case white:
             player = whitePoint;
             total = totalWhite;
+            break;
         default:
             player=redPoint;
-            total=totalRed;
-            break;
+            total=totalRed;    
     }
     player+=value;
     total.innerHTML = player;
