@@ -43,3 +43,37 @@ playerGreen.onclick = ()=>{
 playerRed.onclick = ()=>{
     redPlayerRow.style.display = 'block';
 };
+
+
+//Radio button functionality
+
+// add an event listener for the change event
+const radioButtons = document.querySelectorAll('input[name="phase"]');
+for(const radioButton of radioButtons){
+    radioButton.addEventListener('change', showSelected);
+}        
+
+function showSelected(e) {
+    const columnA = document.getElementsByClassName("a-column");
+    const columnB = document.getElementsByClassName("b-column");
+    const columnC = document.getElementsByClassName("c-column");
+    if (this.checked && this.value === "a") {
+       for (let i = 0; i < columnA.length; i++) {
+            columnA[i].classList.replace("hide","column-a")
+            columnB[i].classList.replace("column-b","hide")
+            columnC[i].classList.replace("column-c","hide")
+       }
+    } else if (this.checked && this.value === "b") {
+        for (let i = 0; i < columnA.length; i++) {
+            columnA[i].classList.replace("column-a","hide")
+            columnB[i].classList.replace("hide","column-b")
+            columnC[i].classList.replace("column-c","hide")
+       }
+    } else {
+        for (let i = 0; i < columnA.length; i++) {
+            columnA[i].classList.replace("column-a","hide")
+            columnB[i].classList.replace("column-b","hide")
+            columnC[i].classList.replace("hide","column-c")
+       }
+    }
+}
