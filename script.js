@@ -21,7 +21,6 @@ const redPlayerRow = document.getElementById('redPlayerRow');
 
 playerBlue.onclick = ()=>{
     bluePlayerRow.style.display = 'block';
-    import ('./playerblue.js');
 };
 
 playerWhite.onclick = ()=>{
