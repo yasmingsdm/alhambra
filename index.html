@@ -42,88 +42,179 @@
             </div>
         </section>
         <section class="points">
-                <div class="player-column" id="bluePlayerRow">
+                <div class="player-column points__blue" id="bluePlayerRow">
                     <div class="total-container"><div id="totalblue">0</div></div>
                     <!--Points A-->
                     <div class="scores a-column column-a" id="blue-container-a">
-                        <div><input type="radio" name="ablue" value="1"></div>
-                        <div><input type="radio" name="ared" value="2"></div>
-                        <div><input type="radio" name="abrown" value="3"></div>
-                        <div><input type="radio" name="awhite" value="4"></div>
-                        <div><input type="radio" name="agreen" value="5"></div>
-                        <div><input type="radio" name="apurple" value="6"></div>
+                        <div class="blue-square"><input type="radio" name="ablue" value="1"></div>
+                        <div class="red-square"><input type="radio" name="ared" value="2"></div>
+                        <div class="brown-square"><input type="radio" name="abrown" value="3"></div>
+                        <div class="white-square"><input type="radio" name="awhite" value="4"></div>
+                        <div class="green-square"><input type="radio" name="agreen" value="5"></div>
+                        <div class="purple-square"><input type="radio" name="apurple" value="6"></div>
                     </div>
                     <!--Points B-->
                     <div class="scores b-column hide">
                         <div>
-                            <input type="radio" name="b1blue" value="8">
-                            <input type="radio" name="b2blue" value="1">
+                            <div class="blue-square">
+                                <label for="b1blue">1st</label>
+                                <input type="radio" name="b1blue" value="8" id="b1blue">
+                            </div>
+                            <div class="blue-square">
+                                <label for="b2blue">2nd</label>
+                                <input type="radio" name="b2blue" value="1" id="b2blue">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="red-square">
+                                <label for="b1red">1st</label>
+                                <input type="radio" name="b1red" value="9" id="b1red">
+                            </div>
+                            <div class="red-square">
+                                <label for="b2red">2nd</label>
+                                <input type="radio" name="b2red" value="2" id="b2red">
+                            </div>
                         </div>
                         <div>
-                            <input type="radio" name="b1red" value="9">
-                            <input type="radio" name="b2red" value="2">
+                            <div class="brown-square">
+                                <label for="b1brown">1st</label>
+                                <input type="radio" name="b1brown" value="10" id="b1brown">
+                            </div>
+                            <div class="brown-square">
+                                <label for="b2brown">2nd</label>
+                                <input type="radio" name="b2brown" value="3" id="b2brown">
+                            </div>
                         </div>
                         <div>
-                            <input type="radio" name="b1brown" value="10">
-                            <input type="radio" name="b2brown" value="3">
+                            <div class="white-square">
+                                <label for="b1white">1st</label>
+                                <input type="radio" name="b1white" value="11" id="b1white">
+                            </div>
+                            <div class="white-square">
+                                <label for="b2white">2nd</label>
+                                <input type="radio" name="b2white" value="4" id="b2white">
+                            </div>
                         </div>
                         <div>
-                            <input type="radio" name="b1white" value="11">
-                            <input type="radio" name="b2white" value="4">
+                            <div class="green-square">
+                                <label for="b1green">1st</label>
+                                <input type="radio" name="b1green" value="12" id="b1green">
+                            </div>
+                            <div class="green-square">
+                                <label for="b2green">2nd</label>
+                                <input type="radio" name="b2green" value="5" id="b2green">
+                            </div>
                         </div>
                         <div>
-                            <input type="radio" name="b1green" value="12">
-                            <input type="radio" name="b2green" value="5">
-                        </div>
-                        <div>
-                            <input type="radio" name="b1purple" value="13">
-                            <input type="radio" name="b2purple" value="6">
+                            <div class="purple-square">
+                                <label for="b1purple">1st</label>
+                                <input type="radio" name="b1purple" value="13" id="b1purple">
+                            </div>
+                            <div class="purple-square">
+                                <label for="b2purple">2nd</label>
+                                <input type="radio" name="b2purple" value="6" id="b2purple">
+                            </div>
                         </div>
                     </div>
                     <!--Points C-->
                     <div class="scores c-column hide">
                         <div>
-                            <input type="radio" name="c1blue" value="16">
-                            <input type="radio" name="c2blue" value="8">
-                            <input type="radio" name="c3blue" value="1">
+                            <div class="blue-square">
+                                <label for="c1blue">1st</label>
+                                <input type="radio" name="c1blue" value="16" id="c1blue">
+                            </div>
+                            <div class="blue-square">
+                                <label for="c2blue">2nd</label>
+                                <input type="radio" name="c2blue" value="8" id="c2blue">
+                            </div>
+                            <div class="blue-square">
+                                <label for="c3blue">3rd</label>
+                                <input type="radio" name="c3blue" value="1" id="c3blue">
+                            </div>
                         </div>
                         <div>
-                            <input type="radio" name="c1red" value="17">
-                            <input type="radio" name="c2red" value="9">
-                            <input type="radio" name="c3red" value="2">
+                            <div class="red-square">
+                                <label for="c1red">1st</label>
+                                <input type="radio" name="c1red" value="17" id="c1red">
+                            </div>
+                            <div class="red-square">
+                                <label for="c2red">2nd</label>
+                                <input type="radio" name="c2red" value="9" id="c2red">
+                            </div>
+                            <div class="red-square">
+                                <label for="c3red">3rd</label>
+                                <input type="radio" name="c3red" value="2" id="c3red">
+                            </div>
                         </div>
                         <div>
-                            <input type="radio" name="c1brown" value="18">
-                            <input type="radio" name="c2brown" value="10">
-                            <input type="radio" name="c3brown" value="3">
+                            <div class="brown-square">
+                                <label for="c1brown">1st</label>
+                                <input type="radio" name="c1brown" value="18" id="c1brown">
+                            </div>
+                            <div class="brown-square">
+                                <label for="c2brown">2nd</label>
+                                <input type="radio" name="c2brown" value="10" id="c2brown">
+                            </div>
+                            <div class="brown-square">
+                                <label for="c3brown">3rd</label>
+                                <input type="radio" name="c3brown" value="3" id="c3brown">
+                            </div>
                         </div>
                         <div>
-                            <input type="radio" name="c1white" value="19">
-                            <input type="radio" name="c2white" value="11">
-                            <input type="radio" name="c3white" value="4">
+                            <div class="white-square">
+                                <label for="c1white">1st</label>
+                                <input type="radio" name="c1white" value="19" id="c1white">
+                            </div>
+                            <div class="white-square">
+                                <label for="c2white">2nd</label>
+                                <input type="radio" name="c2white" value="11" id="c2white">
+                            </div>
+                            <div class="white-square">
+                                <label for="c3white">3rd</label>
+                                <input type="radio" name="c3white" value="4" id="c3white">
+                            </div>
                         </div>
                         <div>
-                            <input type="radio" name="c1green" value="20">
-                            <input type="radio" name="c2green" value="12">
-                            <input type="radio" name="c3green" value="5">
+                            <div class="green-square">
+                                <label for="c1green">1st</label>
+                                <input type="radio" name="c1green" value="20" id="c1green">
+                            </div>
+                            <div class="green-square">
+                                <label for="c2green">2nd</label>
+                                <input type="radio" name="c2green" value="12" id="c2green">
+                            </div>
+                            <div class="green-square">
+                                <label for="c3green">3rd</label>
+                                <input type="radio" name="c3green" value="5" id="c3green">
+                            </div>
                         </div>
                         <div>
-                            <input type="radio" name="c1purple" value="22">
-                            <input type="radio" name="c2purple" value="13">
-                            <input type="radio" name="c3purple" value="6">
+                            <div class="purple-square">
+                                <label for="c1purple">1st</label>
+                                <input type="radio" name="c1purple" value="22" id="c1purple">
+                            </div>
+                            <div class="purple-square">
+                                <label for="c2purple">2nd</label>
+                                <input type="radio" name="c2purple" value="13" id="c2purple">
+                            </div>
+                            <div class="purple-square">
+                                <label for="c3purple">3rd</label>
+                                <input type="radio" name="c3purple" value="6" id="c3purple">
+                            </div>
                         </div>
                     </div>                    
                 </div>
-                <div class="player-column" id="whitePlayerRow">
+                <div class="player-column points__white" id="whitePlayerRow">
                     <div class="total-container"><div id="totalwhite">0</div></div>
                     <!--Points A-->
                     <div class="scores a-column column-a" id="blue-container-a">
-                        <div><input type="radio" name="ablue" value="1"></div>
-                        <div><input type="radio" name="ared" value="2"></div>
-                        <div><input type="radio" name="abrown" value="3"></div>
-                        <div><input type="radio" name="awhite" value="4"></div>
-                        <div><input type="radio" name="agreen" value="5"></div>
-                        <div><input type="radio" name="apurple" value="6"></div>
+                        <div class="blue-square"><input type="radio" name="ablue" value="1"></div>
+                        <div class="red-square"><input type="radio" name="ared" value="2"></div>
+                        <div class="brown-square"><input type="radio" name="abrown" value="3"></div>
+                        <div class="white-square"><input type="radio" name="awhite" value="4"></div>
+                        <div class="green-square"><input type="radio" name="agreen" value="5"></div>
+                        <div class="purple-square"><input type="radio" name="apurple" value="6"></div>
                     </div>
                     <!--Points B-->
                     <div class="scores b-column hide">
@@ -186,16 +277,16 @@
                         </div>
                     </div>                    
                 </div>
-                <div class="player-column" id="orangePlayerRow">
+                <div class="player-column points__orange" id="orangePlayerRow">
                     <div class="total-container"><div id="totalorange">0</div></div>
                     <!--Points A-->
                     <div class="scores a-column column-a" id="blue-container-a">
-                        <div><input type="radio" name="ablue" value="1"></div>
-                        <div><input type="radio" name="ared" value="2"></div>
-                        <div><input type="radio" name="abrown" value="3"></div>
-                        <div><input type="radio" name="awhite" value="4"></div>
-                        <div><input type="radio" name="agreen" value="5"></div>
-                        <div><input type="radio" name="apurple" value="6"></div>
+                        <div class="blue-square"><input type="radio" name="ablue" value="1"></div>
+                        <div class="red-square"><input type="radio" name="ared" value="2"></div>
+                        <div class="brown-square"><input type="radio" name="abrown" value="3"></div>
+                        <div class="white-square"><input type="radio" name="awhite" value="4"></div>
+                        <div class="green-square"><input type="radio" name="agreen" value="5"></div>
+                        <div class="purple-square"><input type="radio" name="apurple" value="6"></div>
                     </div>
                     <!--Points B-->
                     <div class="scores b-column hide">
@@ -258,16 +349,16 @@
                         </div>
                     </div>                    
                 </div>
-                <div class="player-column" id="yellowPlayerRow">
+                <div class="player-column points__yellow" id="yellowPlayerRow">
                     <div class="total-container"><div id="totalyellow">0</div></div>
                     <!--Points A-->
                     <div class="scores a-column column-a" id="blue-container-a">
-                        <div><input type="radio" name="ablue" value="1"></div>
-                        <div><input type="radio" name="ared" value="2"></div>
-                        <div><input type="radio" name="abrown" value="3"></div>
-                        <div><input type="radio" name="awhite" value="4"></div>
-                        <div><input type="radio" name="agreen" value="5"></div>
-                        <div><input type="radio" name="apurple" value="6"></div>
+                        <div class="blue-square"><input type="radio" name="ablue" value="1"></div>
+                        <div class="red-square"><input type="radio" name="ared" value="2"></div>
+                        <div class="brown-square"><input type="radio" name="abrown" value="3"></div>
+                        <div class="white-square"><input type="radio" name="awhite" value="4"></div>
+                        <div class="green-square"><input type="radio" name="agreen" value="5"></div>
+                        <div class="purple-square"><input type="radio" name="apurple" value="6"></div>
                     </div>
                     <!--Points B-->
                     <div class="scores b-column hide">
@@ -330,16 +421,16 @@
                         </div>
                     </div>                    
                 </div>
-                <div class="player-column" id="greenPlayerRow">
+                <div class="player-column points__green" id="greenPlayerRow">
                     <div class="total-container"><div id="totalgreen">0</div></div>
                     <!--Points A-->
                     <div class="scores a-column column-a" id="blue-container-a">
-                        <div><input type="radio" name="ablue" value="1"></div>
-                        <div><input type="radio" name="ared" value="2"></div>
-                        <div><input type="radio" name="abrown" value="3"></div>
-                        <div><input type="radio" name="awhite" value="4"></div>
-                        <div><input type="radio" name="agreen" value="5"></div>
-                        <div><input type="radio" name="apurple" value="6"></div>
+                        <div class="blue-square"><input type="radio" name="ablue" value="1"></div>
+                        <div class="red-square"><input type="radio" name="ared" value="2"></div>
+                        <div class="brown-square"><input type="radio" name="abrown" value="3"></div>
+                        <div class="white-square"><input type="radio" name="awhite" value="4"></div>
+                        <div class="green-square"><input type="radio" name="agreen" value="5"></div>
+                        <div class="purple-square"><input type="radio" name="apurple" value="6"></div>
                     </div>
                     <!--Points B-->
                     <div class="scores b-column hide">
@@ -402,16 +493,16 @@
                         </div>
                     </div>                    
                 </div>
-                <div class="player-column" id="redPlayerRow">
+                <div class="player-column points__red" id="redPlayerRow">
                     <div class="total-container"><div id="totalred">0</div></div>
                     <!--Points A-->
                     <div class="scores a-column column-a" id="blue-container-a">
-                        <div><input type="radio" name="ablue" value="1"></div>
-                        <div><input type="radio" name="ared" value="2"></div>
-                        <div><input type="radio" name="abrown" value="3"></div>
-                        <div><input type="radio" name="awhite" value="4"></div>
-                        <div><input type="radio" name="agreen" value="5"></div>
-                        <div><input type="radio" name="apurple" value="6"></div>
+                        <div class="blue-square"><input type="radio" name="ablue" value="1"></div>
+                        <div class="red-square"><input type="radio" name="ared" value="2"></div>
+                        <div class="brown-square"><input type="radio" name="abrown" value="3"></div>
+                        <div class="white-square"><input type="radio" name="awhite" value="4"></div>
+                        <div class="green-square"><input type="radio" name="agreen" value="5"></div>
+                        <div class="purple-square"><input type="radio" name="apurple" value="6"></div>
                     </div>
                     <!--Points B-->
                     <div class="scores b-column hide">
@@ -477,7 +568,7 @@
         </section>
     </main>
     <footer>
-        Created by <a href="https://github.com/yasmingsdm">Yasmin Dal Medico</a>
+        Created by <a href="https://github.com/AdyValsa">Adriano Valsangiacomo</a> and <a href="https://github.com/yasmingsdm">Yasmin Dal Medico</a>
     </footer>
     <script type="module" src="./script.js"></script>
     <script type="module" src="./radioPoints.js"></script>

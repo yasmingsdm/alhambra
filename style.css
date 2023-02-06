@@ -74,9 +74,7 @@ h2{
     margin: 20px;
     padding:10px;
 }
-.player-column {
-    margin-bottom: 1rem;
-}
+
 .player{
     width: 60px;
     height: 60px;
@@ -108,55 +106,6 @@ h2{
 
 .yellow{
     background-color: var(--yellow);
-}
-
-#bluePlayerRow, #whitePlayerRow, #orangePlayerRow, #yellowPlayerRow, #greenPlayerRow, #redPlayerRow{
-    border-radius:5px;
-    padding:5px;
-}
-
-#bluePlayerRow {
-    border: 8px solid var(--blue);
-    box-shadow: 0px 2px 5px var(--blue);
-    color: var(--blue);
-}
-#whitePlayerRow {
-    border: 8px solid var(--white);
-    box-shadow: 0px 2px 5px var(--white);
-    color: var(--white);
-}
-
-#orangePlayerRow {
-    border: 8px solid var(--orange);
-    box-shadow: 0px 2px 5px var(--orange);
-    color: var(--orange);
-}
-#yellowPlayerRow {
-    border: 8px solid var(--yellow);
-    box-shadow: 0px 2px 5px var(--yellow);
-    color: var(--yellow);
-}
-#greenPlayerRow {
-    border: 8px solid var(--green);
-    box-shadow: 0px 2px 5px var(--green);
-    color: var(--green);
-}
-#redPlayerRow {
-    border: 8px solid var(--red);
-    box-shadow: 0px 2px 5px var(--red);
-    color: var(--red);
-}
-
-#bluePlayerRow, #whitePlayerRow, #orangePlayerRow, #yellowPlayerRow, #greenPlayerRow, #redPlayerRow{
-    display:none;
-}
-
-.total-container {
-    width: 220px;
-    text-align: center;
-    font-size: 4em;
-    font-weight: 800;
-    text-shadow: 0px 0px 5px black;
 }
 
 
@@ -223,6 +172,94 @@ width: 90%;
 
 .purple{
     background-color: var(--purple);
+}
+
+.player-column {
+    margin-bottom: 1rem;
+    border-radius:5px;
+    padding:5px;
+    display:none;
+}
+
+.points__blue {
+    border: 8px solid var(--blue);
+    box-shadow: 0px 2px 5px var(--blue);
+    color: var(--blue);
+}
+.points__white {
+    border: 8px solid var(--white);
+    box-shadow: 0px 2px 5px var(--white);
+    color: var(--white);
+}
+
+.points__orange {
+    border: 8px solid var(--orange);
+    box-shadow: 0px 2px 5px var(--orange);
+    color: var(--orange);
+}
+.points__yellow {
+    border: 8px solid var(--yellow);
+    box-shadow: 0px 2px 5px var(--yellow);
+    color: var(--yellow);
+}
+.points__green {
+    border: 8px solid var(--green);
+    box-shadow: 0px 2px 5px var(--green);
+    color: var(--green);
+}
+.points__red {
+    border: 8px solid var(--red);
+    box-shadow: 0px 2px 5px var(--red);
+    color: var(--red);
+}
+
+.total-container {
+    width: 170px;
+    text-align: center;
+    font-size: 4em;
+    font-weight: 800;
+    text-shadow: 0px 0px 5px black;
+}
+
+.blue-square{
+    background-color: var(--blue);
+    height: 35px;
+    width: 35px;
+}
+
+.red-square{
+    background-color: var(--red);
+    height: 35px;
+    width: 35px;
+}
+
+.brown-square{
+    background-color: var(--brown);
+    height: 35px;
+    width: 35px;
+}
+
+.white-square{
+    background-color: var(--white);
+    height: 35px;
+    width: 35px;
+}
+
+.green-square{
+    background-color: var(--green);
+    height: 35px;
+    width: 35px;
+}
+
+.purple-square{
+    background-color: var(--purple);
+    height: 35px;
+    width: 35px;
+}
+
+label{
+    color:var(--background-1);
+    padding: 3px;
 }
 
 /* Footer*/
