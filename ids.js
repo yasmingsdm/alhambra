@@ -1,12 +1,8 @@
-//Id columns:
-// const columnA = document.getElementsByClassName('column-a');
-// const columnB1 = document.getElementsByClassName('column-b1');
-// const columnB2 = document.getElementsByClassName('column-b2');
-// const columnC1 = document.getElementsByClassName('column-c1');
-// const columnC2 = document.getElementsByClassName('column-c2');
-// const columnC3 = document.getElementsByClassName('column-c3');
-
-
+// Get Ids:
+const ids = (tile, time, player)=>{
+    let itemId= `${tile}${time}-${player}`
+    return document.getElementById('`${itemId}`')
+}
 // Id-points player white:
 
 const blueAWhite = document.getElementById('blueA-white');
