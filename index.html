@@ -29,15 +29,19 @@
                     <div id="phases"></div>
                     <div>
                         <input type="radio" name="phase" value="a" id="radio-a" checked>
-                        <label for="a">A</label>
+                        <label for="radio-a">A</label>
                     </div>
                     <div>
                         <input type="radio" name="phase" value="b" id="radio-b">
-                        <label for="b">B</label>
+                        <label for="radio-b">B</label>
                     </div>
                     <div>
                         <input type="radio" name="phase" value="c" id="radio-c">
-                        <label for="c">C</label>
+                        <label for="radio-c">C</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="phase" value="wall" id="radio-wall">
+                        <label for="radio-wall">Wall</label>
                     </div>
             </div>
         </section>
@@ -46,12 +50,12 @@
                     <div class="total-container"><div id="totalblue">0</div></div>
                     <!--Points A-->
                     <div class="scores a-column column-a" id="blue-container-a">
-                        <div class="blue-square"><input type="checkbox" name="ablue" value="1"></div>
-                        <div class="red-square"><input type="checkbox" name="ared" value="2"></div>
-                        <div class="brown-square"><input type="checkbox" name="abrown" value="3"></div>
-                        <div class="white-square"><input type="checkbox" name="awhite" value="4"></div>
-                        <div class="green-square"><input type="checkbox" name="agreen" value="5"></div>
-                        <div class="purple-square"><input type="checkbox" name="apurple" value="6"></div>
+                        <div><div class="blue-square"><input type="checkbox" name="ablue" value="1"></div></div>
+                        <div><div class="red-square"><input type="checkbox" name="ared" value="2"></div></div>
+                        <div><div class="brown-square"><input type="checkbox" name="abrown" value="3"></div></div>
+                        <div><div class="white-square"><input type="checkbox" name="awhite" value="4"></div></div>
+                        <div><div class="green-square"><input type="checkbox" name="agreen" value="5"></div></div>
+                        <div><div class="purple-square"><input type="checkbox" name="apurple" value="6"></div></div>
                     </div>
                     <!--Points B-->
                     <div class="scores b-column hide">
@@ -203,366 +207,830 @@
                                 <input type="checkbox" name="c3purple" value="6" id="c3purple">
                             </div>
                         </div>
-                    </div>                    
+                    </div> 
+                    <!--Wall-->  
+                    <div class="wall">
+                        <label for="wall-blue">Biggest wall:</label>  
+                        <input type="number" id="wall-blue">  
+                    </div>       
                 </div>
                 <div class="player-column points__white" id="whitePlayerRow">
                     <div class="total-container"><div id="totalwhite">0</div></div>
                     <!--Points A-->
                     <div class="scores a-column column-a" id="blue-container-a">
-                        <div class="blue-square"><input type="checkbox" name="ablue" value="1"></div>
-                        <div class="red-square"><input type="checkbox" name="ared" value="2"></div>
-                        <div class="brown-square"><input type="checkbox" name="abrown" value="3"></div>
-                        <div class="white-square"><input type="checkbox" name="awhite" value="4"></div>
-                        <div class="green-square"><input type="checkbox" name="agreen" value="5"></div>
-                        <div class="purple-square"><input type="checkbox" name="apurple" value="6"></div>
+                        <div><div class="blue-square"><input type="checkbox" name="ablue" value="1"></div></div>
+                        <div><div class="red-square"><input type="checkbox" name="ared" value="2"></div></div>
+                        <div><div class="brown-square"><input type="checkbox" name="abrown" value="3"></div></div>
+                        <div><div class="white-square"><input type="checkbox" name="awhite" value="4"></div></div>
+                        <div><div class="green-square"><input type="checkbox" name="agreen" value="5"></div></div>
+                        <div><div class="purple-square"><input type="checkbox" name="apurple" value="6"></div></div>
                     </div>
                     <!--Points B-->
                     <div class="scores b-column hide">
                         <div>
-                            <input type="checkbox" name="b1blue" value="8">
-                            <input type="checkbox" name="b2blue" value="1">
+                            <div class="blue-square">
+                                <label for="b1bluew">1st</label>
+                                <input type="checkbox" name="b1blue" value="8" id="b1bluew">
+                            </div>
+                            <div class="blue-square">
+                                <label for="b2bluew">2nd</label>
+                                <input type="checkbox" name="b2blue" value="1" id="b2bluew">
+                            </div>
+                            
                         </div>
                         <div>
-                            <input type="checkbox" name="b1red" value="9">
-                            <input type="checkbox" name="b2red" value="2">
+                            <div class="red-square">
+                                <label for="b1redw">1st</label>
+                                <input type="checkbox" name="b1red" value="9" id="b1redw">
+                            </div>
+                            <div class="red-square">
+                                <label for="b2redw">2nd</label>
+                                <input type="checkbox" name="b2red" value="2" id="b2redw">
+                            </div>
                         </div>
                         <div>
-                            <input type="checkbox" name="b1brown" value="10">
-                            <input type="checkbox" name="b2brown" value="3">
+                            <div class="brown-square">
+                                <label for="b1brownw">1st</label>
+                                <input type="checkbox" name="b1brown" value="10" id="b1brownw">
+                            </div>
+                            <div class="brown-square">
+                                <label for="b2brownw">2nd</label>
+                                <input type="checkbox" name="b2brown" value="3" id="b2brownw">
+                            </div>
                         </div>
                         <div>
-                            <input type="checkbox" name="b1white" value="11">
-                            <input type="checkbox" name="b2white" value="4">
+                            <div class="white-square">
+                                <label for="b1whitew">1st</label>
+                                <input type="checkbox" name="b1white" value="11" id="b1whitew">
+                            </div>
+                            <div class="white-square">
+                                <label for="b2whitew">2nd</label>
+                                <input type="checkbox" name="b2white" value="4" id="b2whitew">
+                            </div>
                         </div>
                         <div>
-                            <input type="checkbox" name="b1green" value="12">
-                            <input type="checkbox" name="b2green" value="5">
+                            <div class="green-square">
+                                <label for="b1greenw">1st</label>
+                                <input type="checkbox" name="b1green" value="12" id="b1greenw">
+                            </div>
+                            <div class="green-square">
+                                <label for="b2greenw">2nd</label>
+                                <input type="checkbox" name="b2green" value="5" id="b2greenw">
+                            </div>
                         </div>
                         <div>
-                            <input type="checkbox" name="b1purple" value="13">
-                            <input type="checkbox" name="b2purple" value="6">
+                            <div class="purple-square">
+                                <label for="b1purplew">1st</label>
+                                <input type="checkbox" name="b1purple" value="13" id="b1purplew">
+                            </div>
+                            <div class="purple-square">
+                                <label for="b2purplew">2nd</label>
+                                <input type="checkbox" name="b2purple" value="6" id="b2purplew">
+                            </div>
                         </div>
                     </div>
                     <!--Points C-->
                     <div class="scores c-column hide">
                         <div>
-                            <input type="checkbox" name="c1blue" value="16">
-                            <input type="checkbox" name="c2blue" value="8">
-                            <input type="checkbox" name="c3blue" value="1">
+                            <div class="blue-square">
+                                <label for="c1bluew">1st</label>
+                                <input type="checkbox" name="c1blue" value="16" id="c1bluew">
+                            </div>
+                            <div class="blue-square">
+                                <label for="c2bluew">2nd</label>
+                                <input type="checkbox" name="c2blue" value="8" id="c2bluew">
+                            </div>
+                            <div class="blue-square">
+                                <label for="c3bluew">3rd</label>
+                                <input type="checkbox" name="c3blue" value="1" id="c3bluew">
+                            </div>
                         </div>
                         <div>
-                            <input type="checkbox" name="c1red" value="17">
-                            <input type="checkbox" name="c2red" value="9">
-                            <input type="checkbox" name="c3red" value="2">
+                            <div class="red-square">
+                                <input type="checkbox" name="c1red" value="17">
+                            </div>
+                            <div class="red-square">
+                                <input type="checkbox" name="c2red" value="9">
+                            </div>
+                            <div class="red-square">
+                                <input type="checkbox" name="c3red" value="2">
+                            </div>
                         </div>
                         <div>
-                            <input type="checkbox" name="c1brown" value="18">
-                            <input type="checkbox" name="c2brown" value="10">
-                            <input type="checkbox" name="c3brown" value="3">
+                            <div class="brown-square">
+                                <input type="checkbox" name="c1brown" value="18">
+                            </div>
+                            <div class="brown-square">
+                                <input type="checkbox" name="c2brown" value="10">
+                            </div>
+                            <div class="brown-square">
+                                <input type="checkbox" name="c3brown" value="3">
+                            </div>
                         </div>
                         <div>
-                            <input type="checkbox" name="c1white" value="19">
-                            <input type="checkbox" name="c2white" value="11">
-                            <input type="checkbox" name="c3white" value="4">
+                            <div class="white-square">
+                                <input type="checkbox" name="c1white" value="19">
+                            </div>
+                            <div class="white-square">
+                                <input type="checkbox" name="c2white" value="11">
+                            </div>
+                            <div class="white-square">
+                                <input type="checkbox" name="c3white" value="4">
+                            </div>
                         </div>
                         <div>
-                            <input type="checkbox" name="c1green" value="20">
-                            <input type="checkbox" name="c2green" value="12">
-                            <input type="checkbox" name="c3green" value="5">
+                            <div class="green-square">
+                                <input type="checkbox" name="c1green" value="20">
+                            </div>
+                            <div class="green-square">
+                                <input type="checkbox" name="c2green" value="12">
+                            </div>
+                            <div class="green-square">
+                                <input type="checkbox" name="c3green" value="5">
+                            </div>
                         </div>
                         <div>
-                            <input type="checkbox" name="c1purple" value="22">
-                            <input type="checkbox" name="c2purple" value="13">
-                            <input type="checkbox" name="c3purple" value="6">
+                            <div class="purple-square">
+                                <input type="checkbox" name="c1purple" value="22">
+                            </div>
+                            <div class="purple-square">
+                                <input type="checkbox" name="c2purple" value="13">
+                            </div>
+                            <div class="purple-square">
+                                <input type="checkbox" name="c3purple" value="6">
+                            </div>
                         </div>
-                    </div>                    
+                    </div> 
+                    <!--Wall-->  
+                    <div class="wall">
+                        <label for="wall-blue">Biggest wall:</label>  
+                        <input type="number" id="wall-blue">  
+                    </div>                   
                 </div>
                 <div class="player-column points__orange" id="orangePlayerRow">
                     <div class="total-container"><div id="totalorange">0</div></div>
                     <!--Points A-->
                     <div class="scores a-column column-a" id="blue-container-a">
-                        <div class="blue-square"><input type="checkbox" name="ablue" value="1"></div>
-                        <div class="red-square"><input type="checkbox" name="ared" value="2"></div>
-                        <div class="brown-square"><input type="checkbox" name="abrown" value="3"></div>
-                        <div class="white-square"><input type="checkbox" name="awhite" value="4"></div>
-                        <div class="green-square"><input type="checkbox" name="agreen" value="5"></div>
-                        <div class="purple-square"><input type="checkbox" name="apurple" value="6"></div>
+                        <div><div class="blue-square"><input type="checkbox" name="ablue" value="1"></div></div>
+                        <div><div class="red-square"><input type="checkbox" name="ared" value="2"></div></div>
+                        <div><div class="brown-square"><input type="checkbox" name="abrown" value="3"></div></div>
+                        <div><div class="white-square"><input type="checkbox" name="awhite" value="4"></div></div>
+                        <div><div class="green-square"><input type="checkbox" name="agreen" value="5"></div></div>
+                        <div><div class="purple-square"><input type="checkbox" name="apurple" value="6"></div></div>
                     </div>
                     <!--Points B-->
                     <div class="scores b-column hide">
                         <div>
-                            <input type="checkbox" name="b1blue" value="8">
-                            <input type="checkbox" name="b2blue" value="1">
+                            <div class="blue-square">
+                                <input type="checkbox" name="b1blue" value="8">
+                            </div>
+                            <div class="blue-square">
+                                <input type="checkbox" name="b2blue" value="1">
+                            </div>
                         </div>
                         <div>
-                            <input type="checkbox" name="b1red" value="9">
-                            <input type="checkbox" name="b2red" value="2">
+                            <div class="red-square">
+                                <input type="checkbox" name="b1red" value="9">
+                            </div>
+                            
+                            <div class="red-square">
+                                <input type="checkbox" name="b2red" value="2">
+                            </div>
+                            
                         </div>
                         <div>
-                            <input type="checkbox" name="b1brown" value="10">
-                            <input type="checkbox" name="b2brown" value="3">
+                            <div class="brown-square">
+                                <input type="checkbox" name="b1brown" value="10">
+                            </div>
+                            
+                            <div class="brown-square">
+                                <input type="checkbox" name="b2brown" value="3">
+                            </div>
+                            
                         </div>
                         <div>
-                            <input type="checkbox" name="b1white" value="11">
-                            <input type="checkbox" name="b2white" value="4">
+                            <div class="white-square">
+                                <input type="checkbox" name="b1white" value="11">
+                            </div>
+                            
+                            <div class="white-square">
+                                <input type="checkbox" name="b2white" value="4">
+                            </div>
+                            
                         </div>
                         <div>
-                            <input type="checkbox" name="b1green" value="12">
-                            <input type="checkbox" name="b2green" value="5">
+                            <div class="green-square">
+                                <input type="checkbox" name="b1green" value="12">
+                            </div>
+                            
+                            <div class="green-square">
+                                <input type="checkbox" name="b2green" value="5">
+                            </div>
+                            
                         </div>
                         <div>
-                            <input type="checkbox" name="b1purple" value="13">
-                            <input type="checkbox" name="b2purple" value="6">
+                            <div class="purple-square">
+                                <input type="checkbox" name="b1purple" value="13">
+                            </div>
+                            
+                            <div class="purple-square">
+                                <input type="checkbox" name="b2purple" value="6">
+                            </div>
+                            
                         </div>
                     </div>
                     <!--Points C-->
                     <div class="scores c-column hide">
                         <div>
-                            <input type="checkbox" name="c1blue" value="16">
-                            <input type="checkbox" name="c2blue" value="8">
-                            <input type="checkbox" name="c3blue" value="1">
+                            <div class="blue-square">
+                                <input type="checkbox" name="c1blue" value="16">
+                            </div>
+                            
+                            <div class="blue-square">
+                                <input type="checkbox" name="c2blue" value="8">
+                            </div>
+                            
+                            <div class="blue-square">
+                                <input type="checkbox" name="c3blue" value="1">
+                            </div>
+                            
                         </div>
                         <div>
-                            <input type="checkbox" name="c1red" value="17">
-                            <input type="checkbox" name="c2red" value="9">
-                            <input type="checkbox" name="c3red" value="2">
+                            <div class="red-square">
+                                <input type="checkbox" name="c1red" value="17">
+                            </div>
+                            
+                            <div class="red-square">
+                                <input type="checkbox" name="c2red" value="9">
+                            </div>
+                            
+                            <div class="red-square">
+                                <input type="checkbox" name="c3red" value="2">
+                            </div>
+                            
                         </div>
                         <div>
-                            <input type="checkbox" name="c1brown" value="18">
-                            <input type="checkbox" name="c2brown" value="10">
-                            <input type="checkbox" name="c3brown" value="3">
+                            <div class="brown-square">
+                                <input type="checkbox" name="c1brown" value="18">
+                            </div>
+                            
+                            <div class="brown-square">
+                                <input type="checkbox" name="c2brown" value="10">
+                            </div>
+                            
+                            <div class="brown-square">
+                                <input type="checkbox" name="c3brown" value="3">
+                            </div>
+                            
                         </div>
                         <div>
-                            <input type="checkbox" name="c1white" value="19">
-                            <input type="checkbox" name="c2white" value="11">
-                            <input type="checkbox" name="c3white" value="4">
+                            <div class="white-square">
+                                <input type="checkbox" name="c1white" value="19">
+                            </div>
+                            
+                            <div class="white-square">
+                                <input type="checkbox" name="c2white" value="11">
+                            </div>
+                            
+                            <div class="white-square">
+                                <input type="checkbox" name="c3white" value="4">
+                            </div>
+                            
                         </div>
                         <div>
-                            <input type="checkbox" name="c1green" value="20">
-                            <input type="checkbox" name="c2green" value="12">
-                            <input type="checkbox" name="c3green" value="5">
+                            <div class="green-square">
+                                <input type="checkbox" name="c1green" value="20">
+                            </div>
+                            
+                            <div class="green-square">
+                                <input type="checkbox" name="c2green" value="12">
+                            </div>
+                            
+                            <div class="green-square">
+                                <input type="checkbox" name="c3green" value="5">
+                            </div>
+                            
                         </div>
                         <div>
-                            <input type="checkbox" name="c1purple" value="22">
-                            <input type="checkbox" name="c2purple" value="13">
-                            <input type="checkbox" name="c3purple" value="6">
+                            <div class="purple-square">
+                                <input type="checkbox" name="c1purple" value="22">
+                            </div>
+                            
+                            <div class="purple-square">
+                                <input type="checkbox" name="c2purple" value="13">
+                            </div>
+                            
+                            <div class="purple-square">
+                                <input type="checkbox" name="c3purple" value="6">
+                            </div>
+                           
                         </div>
+                    </div> 
+                    <!--Wall-->  
+                    <div class="wall">
+                        <label for="wall-blue">Biggest wall:</label>  
+                        <input type="number" id="wall-blue">  
                     </div>                    
                 </div>
                 <div class="player-column points__yellow" id="yellowPlayerRow">
                     <div class="total-container"><div id="totalyellow">0</div></div>
                     <!--Points A-->
                     <div class="scores a-column column-a" id="blue-container-a">
-                        <div class="blue-square"><input type="checkbox" name="ablue" value="1"></div>
-                        <div class="red-square"><input type="checkbox" name="ared" value="2"></div>
-                        <div class="brown-square"><input type="checkbox" name="abrown" value="3"></div>
-                        <div class="white-square"><input type="checkbox" name="awhite" value="4"></div>
-                        <div class="green-square"><input type="checkbox" name="agreen" value="5"></div>
-                        <div class="purple-square"><input type="checkbox" name="apurple" value="6"></div>
+                        <div><div class="blue-square"><input type="checkbox" name="ablue" value="1"></div></div>
+                        <div><div class="red-square"><input type="checkbox" name="ared" value="2"></div></div>
+                        <div><div class="brown-square"><input type="checkbox" name="abrown" value="3"></div></div>
+                        <div><div class="white-square"><input type="checkbox" name="awhite" value="4"></div></div>
+                        <div><div class="green-square"><input type="checkbox" name="agreen" value="5"></div></div>
+                        <div><div class="purple-square"><input type="checkbox" name="apurple" value="6"></div></div>
                     </div>
                     <!--Points B-->
                     <div class="scores b-column hide">
                         <div>
-                            <input type="checkbox" name="b1blue" value="8">
-                            <input type="checkbox" name="b2blue" value="1">
+                            <div class="blue-square">
+                                <input type="checkbox" name="b1blue" value="8">
+                            </div>
+                            
+                            <div class="blue-square">
+                                <input type="checkbox" name="b2blue" value="1">
+                            </div>
+                            
                         </div>
                         <div>
-                            <input type="checkbox" name="b1red" value="9">
-                            <input type="checkbox" name="b2red" value="2">
+                            <div class="red-square">
+                                <input type="checkbox" name="b1red" value="9">
+                            </div>
+                            
+                            <div class="red-square">
+                                <input type="checkbox" name="b2red" value="2">
+                            </div>
+                            
                         </div>
                         <div>
-                            <input type="checkbox" name="b1brown" value="10">
-                            <input type="checkbox" name="b2brown" value="3">
+                            <div class="brown-square">
+                                <input type="checkbox" name="b1brown" value="10">
+                            </div>
+                            
+                            <div class="brown-square">
+                                <input type="checkbox" name="b2brown" value="3">
+                            </div>
+                            
                         </div>
                         <div>
-                            <input type="checkbox" name="b1white" value="11">
-                            <input type="checkbox" name="b2white" value="4">
+                            <div class="white-square">
+                                <input type="checkbox" name="b1white" value="11">
+                            </div>
+                            
+                            <div class="white-square">
+                                <input type="checkbox" name="b2white" value="4">
+                            </div>
+                            
                         </div>
                         <div>
-                            <input type="checkbox" name="b1green" value="12">
-                            <input type="checkbox" name="b2green" value="5">
+                            <div class="green-square">
+                                <input type="checkbox" name="b1green" value="12">
+                            </div>
+                            
+                            <div class="green-square">
+                                <input type="checkbox" name="b2green" value="5">
+                            </div>
+                            
                         </div>
                         <div>
-                            <input type="checkbox" name="b1purple" value="13">
-                            <input type="checkbox" name="b2purple" value="6">
+                            <div class="purple-square">
+                                <input type="checkbox" name="b1purple" value="13">
+                            </div>
+                            
+                            <div class="purple-square">
+                                <input type="checkbox" name="b2purple" value="6">
+                            </div>
+                            
                         </div>
                     </div>
                     <!--Points C-->
                     <div class="scores c-column hide">
                         <div>
-                            <input type="checkbox" name="c1blue" value="16">
-                            <input type="checkbox" name="c2blue" value="8">
-                            <input type="checkbox" name="c3blue" value="1">
+                            <div class="blue-square">
+                                <input type="checkbox" name="c1blue" value="16">
+                            </div>
+                            
+                            <div class="blue-square">
+                                <input type="checkbox" name="c2blue" value="8">
+                            </div>
+                            
+                            <div class="blue-square">
+                                <input type="checkbox" name="c3blue" value="1">
+                            </div>
+                            
                         </div>
                         <div>
-                            <input type="checkbox" name="c1red" value="17">
-                            <input type="checkbox" name="c2red" value="9">
-                            <input type="checkbox" name="c3red" value="2">
+                            <div class="red-square">
+                                <input type="checkbox" name="c1red" value="17">
+                            </div>
+                            
+                            <div class="red-square">
+                                <input type="checkbox" name="c2red" value="9">
+                            </div>
+                           
+                            <div class="red-square">
+                                <input type="checkbox" name="c3red" value="2">
+                            </div>
+                            
                         </div>
                         <div>
-                            <input type="checkbox" name="c1brown" value="18">
-                            <input type="checkbox" name="c2brown" value="10">
-                            <input type="checkbox" name="c3brown" value="3">
+                            <div class="brown-square">
+                                <input type="checkbox" name="c1brown" value="18">
+                            </div>
+                            
+                            <div class="brown-square">
+                                <input type="checkbox" name="c2brown" value="10">
+                            </div>
+                            
+                            <div class="brown-square">
+                                <input type="checkbox" name="c3brown" value="3">
+                            </div>
+                            
                         </div>
                         <div>
-                            <input type="checkbox" name="c1white" value="19">
-                            <input type="checkbox" name="c2white" value="11">
-                            <input type="checkbox" name="c3white" value="4">
+                            <div class="white-square">
+                                <input type="checkbox" name="c1white" value="19">
+                            </div>
+                            
+                            <div class="white-square">
+                                <input type="checkbox" name="c2white" value="11">
+                            </div>
+                            
+                            <div class="white-square">
+                                <input type="checkbox" name="c3white" value="4">
+                            </div>
+                            
                         </div>
                         <div>
-                            <input type="checkbox" name="c1green" value="20">
-                            <input type="checkbox" name="c2green" value="12">
-                            <input type="checkbox" name="c3green" value="5">
+                            <div class="green-square">
+                                <input type="checkbox" name="c1green" value="20">
+                            </div>
+                            
+                            <div class="green-square">
+                                <input type="checkbox" name="c2green" value="12">
+                            </div>
+                            
+                            <div class="green-square">
+                                <input type="checkbox" name="c3green" value="5">
+                            </div>
+                            
                         </div>
                         <div>
-                            <input type="checkbox" name="c1purple" value="22">
-                            <input type="checkbox" name="c2purple" value="13">
-                            <input type="checkbox" name="c3purple" value="6">
+                            <div class="purple-square">
+                                <input type="checkbox" name="c1purple" value="22">
+                            </div>
+                            
+                            <div class="purple-square">
+                                <input type="checkbox" name="c2purple" value="13">
+                            </div>
+                            
+                            <div class="purple-square">
+                                <input type="checkbox" name="c3purple" value="6">
+                            </div>
+                            
                         </div>
+                    </div> 
+                    <!--Wall-->  
+                    <div class="wall">
+                        <label for="wall-blue">Biggest wall:</label>  
+                        <input type="number" id="wall-blue">  
                     </div>                    
                 </div>
                 <div class="player-column points__green" id="greenPlayerRow">
                     <div class="total-container"><div id="totalgreen">0</div></div>
                     <!--Points A-->
                     <div class="scores a-column column-a" id="blue-container-a">
-                        <div class="blue-square"><input type="checkbox" name="ablue" value="1"></div>
-                        <div class="red-square"><input type="checkbox" name="ared" value="2"></div>
-                        <div class="brown-square"><input type="checkbox" name="abrown" value="3"></div>
-                        <div class="white-square"><input type="checkbox" name="awhite" value="4"></div>
-                        <div class="green-square"><input type="checkbox" name="agreen" value="5"></div>
-                        <div class="purple-square"><input type="checkbox" name="apurple" value="6"></div>
+                        <div><div class="blue-square"><input type="checkbox" name="ablue" value="1"></div></div>
+                        <div><div class="red-square"><input type="checkbox" name="ared" value="2"></div></div>
+                        <div><div class="brown-square"><input type="checkbox" name="abrown" value="3"></div></div>
+                        <div><div class="white-square"><input type="checkbox" name="awhite" value="4"></div></div>
+                        <div><div class="green-square"><input type="checkbox" name="agreen" value="5"></div></div>
+                        <div><div class="purple-square"><input type="checkbox" name="apurple" value="6"></div></div>
                     </div>
                     <!--Points B-->
                     <div class="scores b-column hide">
                         <div>
-                            <input type="checkbox" name="b1blue" value="8">
-                            <input type="checkbox" name="b2blue" value="1">
+                            <div class="blue-square">
+                                <input type="checkbox" name="b1blue" value="8">
+                            </div>
+                            
+                            <div class="blue-square">
+                                <input type="checkbox" name="b2blue" value="1">
+                            </div>
+                            
                         </div>
                         <div>
-                            <input type="checkbox" name="b1red" value="9">
-                            <input type="checkbox" name="b2red" value="2">
+                            <div class="red-square">
+                                <input type="checkbox" name="b1red" value="9">
+                            </div>
+                            
+                            <div class="red-square">
+                                <input type="checkbox" name="b2red" value="2">
+                            </div>
+                            
                         </div>
                         <div>
-                            <input type="checkbox" name="b1brown" value="10">
-                            <input type="checkbox" name="b2brown" value="3">
+                            <div class="brown-square">
+                                <input type="checkbox" name="b1brown" value="10">
+                            </div>
+                            
+                            <div class="brown-square">
+                                <input type="checkbox" name="b2brown" value="3">
+                            </div>
+                            
                         </div>
                         <div>
-                            <input type="checkbox" name="b1white" value="11">
-                            <input type="checkbox" name="b2white" value="4">
+                            <div class="white-square">
+                                <input type="checkbox" name="b1white" value="11">
+                            </div>
+                            
+                            <div class="white-square">
+                                <input type="checkbox" name="b2white" value="4">
+                            </div>
+                            
                         </div>
                         <div>
-                            <input type="checkbox" name="b1green" value="12">
-                            <input type="checkbox" name="b2green" value="5">
+                            <div class="green-square">
+                                <input type="checkbox" name="b1green" value="12">
+                            </div>
+                            
+                            <div class="green-square">
+                                <input type="checkbox" name="b2green" value="5">
+                            </div>
+                            
                         </div>
                         <div>
-                            <input type="checkbox" name="b1purple" value="13">
-                            <input type="checkbox" name="b2purple" value="6">
+                            <div class="purple-square">
+                                <input type="checkbox" name="b1purple" value="13">
+                            </div>
+                            
+                            <div class="purple-square">
+                                <input type="checkbox" name="b2purple" value="6">
+                            </div>
+                            
                         </div>
                     </div>
                     <!--Points C-->
                     <div class="scores c-column hide">
                         <div>
-                            <input type="checkbox" name="c1blue" value="16">
-                            <input type="checkbox" name="c2blue" value="8">
-                            <input type="checkbox" name="c3blue" value="1">
+                            <div class="blue-square">
+                                <input type="checkbox" name="c1blue" value="16">
+                            </div>
+                            
+                            <div class="blue-square">
+                                <input type="checkbox" name="c2blue" value="8">
+                            </div>
+                            
+                            <div class="blue-square">
+                                <input type="checkbox" name="c3blue" value="1">
+                            </div>
+                            
                         </div>
                         <div>
-                            <input type="checkbox" name="c1red" value="17">
-                            <input type="checkbox" name="c2red" value="9">
-                            <input type="checkbox" name="c3red" value="2">
+                            <div class="red-square">
+                                <input type="checkbox" name="c1red" value="17">
+                            </div>
+                            
+                            <div class="red-square">
+                                <input type="checkbox" name="c2red" value="9">
+                            </div>
+                            
+                            <div class="red-square">
+                                <input type="checkbox" name="c3red" value="2">
+                            </div>
+                            
                         </div>
                         <div>
-                            <input type="checkbox" name="c1brown" value="18">
-                            <input type="checkbox" name="c2brown" value="10">
-                            <input type="checkbox" name="c3brown" value="3">
+                            <div class="brown-square">
+                                <input type="checkbox" name="c1brown" value="18">
+                            </div>
+                            
+                            <div class="brown-square">
+                                <input type="checkbox" name="c2brown" value="10">
+                            </div>
+                            
+                            <div class="brown-square">
+                                <input type="checkbox" name="c3brown" value="3">
+                            </div>
+                            
                         </div>
                         <div>
-                            <input type="checkbox" name="c1white" value="19">
-                            <input type="checkbox" name="c2white" value="11">
-                            <input type="checkbox" name="c3white" value="4">
+                            <div class="white-square">
+                                <input type="checkbox" name="c1white" value="19">
+                            </div>
+                            
+                            <div class="white-square">
+                                <input type="checkbox" name="c2white" value="11">
+                            </div>
+                            
+                            <div class="white-square">
+                                <input type="checkbox" name="c3white" value="4">
+                            </div>
+                            
                         </div>
                         <div>
-                            <input type="checkbox" name="c1green" value="20">
-                            <input type="checkbox" name="c2green" value="12">
-                            <input type="checkbox" name="c3green" value="5">
+                            <div class="green-square">
+                                <input type="checkbox" name="c1green" value="20">
+                            </div>
+                            
+                            <div class="green-square">
+                                <input type="checkbox" name="c2green" value="12">
+                            </div>
+                            
+                            <div class="green-square">
+                                <input type="checkbox" name="c3green" value="5">
+                            </div>
+                            
                         </div>
                         <div>
-                            <input type="checkbox" name="c1purple" value="22">
-                            <input type="checkbox" name="c2purple" value="13">
-                            <input type="checkbox" name="c3purple" value="6">
+                            <div class="purple-square">
+                                <input type="checkbox" name="c1purple" value="22">
+                            </div>
+                            
+                            <div class="purple-square">
+                                <input type="checkbox" name="c2purple" value="13">
+                            </div>
+                            
+                            <div class="purple-square">
+                                <input type="checkbox" name="c3purple" value="6">
+                            </div>
+                            
                         </div>
+                    </div> 
+                    <!--Wall-->  
+                    <div class="wall">
+                        <label for="wall-blue">Biggest wall:</label>  
+                        <input type="number" id="wall-blue">  
                     </div>                    
                 </div>
                 <div class="player-column points__red" id="redPlayerRow">
                     <div class="total-container"><div id="totalred">0</div></div>
                     <!--Points A-->
                     <div class="scores a-column column-a" id="blue-container-a">
-                        <div class="blue-square"><input type="checkbox" name="ablue" value="1"></div>
-                        <div class="red-square"><input type="checkbox" name="ared" value="2"></div>
-                        <div class="brown-square"><input type="checkbox" name="abrown" value="3"></div>
-                        <div class="white-square"><input type="checkbox" name="awhite" value="4"></div>
-                        <div class="green-square"><input type="checkbox" name="agreen" value="5"></div>
-                        <div class="purple-square"><input type="checkbox" name="apurple" value="6"></div>
+                        <div><div class="blue-square"><input type="checkbox" name="ablue" value="1"></div></div>
+                        <div><div class="red-square"><input type="checkbox" name="ared" value="2"></div></div>
+                        <div><div class="brown-square"><input type="checkbox" name="abrown" value="3"></div></div>
+                        <div><div class="white-square"><input type="checkbox" name="awhite" value="4"></div></div>
+                        <div><div class="green-square"><input type="checkbox" name="agreen" value="5"></div></div>
+                        <div><div class="purple-square"><input type="checkbox" name="apurple" value="6"></div></div>
                     </div>
                     <!--Points B-->
                     <div class="scores b-column hide">
                         <div>
-                            <input type="checkbox" name="b1blue" value="8">
-                            <input type="checkbox" name="b2blue" value="1">
+                            <div class="blue-square">
+                                <input type="checkbox" name="b1blue" value="8">
+                            </div>
+                            
+                            <div class="blue-square">
+                                <input type="checkbox" name="b2blue" value="1">
+                            </div>
+                            
                         </div>
                         <div>
-                            <input type="checkbox" name="b1red" value="9">
-                            <input type="checkbox" name="b2red" value="2">
+                            <div class="red-square">
+                                <input type="checkbox" name="b1red" value="9">
+                            </div>
+                            
+                            <div class="red-square">
+                                <input type="checkbox" name="b2red" value="2">
+                            </div>
+                            
                         </div>
                         <div>
-                            <input type="checkbox" name="b1brown" value="10">
-                            <input type="checkbox" name="b2brown" value="3">
+                            <div class="brown-square">
+                                <input type="checkbox" name="b1brown" value="10">
+                            </div>
+                            
+                            <div class="brown-square">
+                                <input type="checkbox" name="b2brown" value="3">
+                            </div>
+                            
                         </div>
                         <div>
-                            <input type="checkbox" name="b1white" value="11">
-                            <input type="checkbox" name="b2white" value="4">
+                            <div class="white-square">
+                                <input type="checkbox" name="b1white" value="11">
+                            </div>
+                            
+                            <div class="white-square">
+                                <input type="checkbox" name="b2white" value="4">
+                            </div>
+                           
                         </div>
                         <div>
-                            <input type="checkbox" name="b1green" value="12">
-                            <input type="checkbox" name="b2green" value="5">
+                            <div class="green-square">
+                                <input type="checkbox" name="b1green" value="12">
+                            </div>
+                            
+                            <div class="green-square">
+                                <input type="checkbox" name="b2green" value="5">
+                            </div>
+                            
                         </div>
                         <div>
-                            <input type="checkbox" name="b1purple" value="13">
-                            <input type="checkbox" name="b2purple" value="6">
+                            <div class="purple-square">
+                                <input type="checkbox" name="b1purple" value="13">
+                            </div>
+                            
+                            <div class="purple-square">
+                                <input type="checkbox" name="b2purple" value="6">
+                            </div>
+                            
                         </div>
                     </div>
                     <!--Points C-->
                     <div class="scores c-column hide">
                         <div>
-                            <input type="checkbox" name="c1blue" value="16">
-                            <input type="checkbox" name="c2blue" value="8">
-                            <input type="checkbox" name="c3blue" value="1">
+                            <div class="blue-square">
+                                <input type="checkbox" name="c1blue" value="16">
+                            </div>
+                            
+                            <div class="blue-square">
+                                <input type="checkbox" name="c2blue" value="8">
+                            </div>
+                            
+                            <div class="blue-square">
+                                <input type="checkbox" name="c3blue" value="1">
+                            </div>
+                            
                         </div>
                         <div>
-                            <input type="checkbox" name="c1red" value="17">
-                            <input type="checkbox" name="c2red" value="9">
-                            <input type="checkbox" name="c3red" value="2">
+                            <div class="red-square">
+                                <input type="checkbox" name="c1red" value="17">
+                            </div>
+                            
+                            <div class="red-square">
+                                <input type="checkbox" name="c2red" value="9">
+                            </div>
+                            
+                            <div class="red-square">
+                                <input type="checkbox" name="c3red" value="2">
+                            </div>
+                            
                         </div>
                         <div>
-                            <input type="checkbox" name="c1brown" value="18">
-                            <input type="checkbox" name="c2brown" value="10">
-                            <input type="checkbox" name="c3brown" value="3">
+                            <div class="brown-square">
+                                <input type="checkbox" name="c1brown" value="18">
+                            </div>
+                            
+                            <div class="brown-square">
+                                <input type="checkbox" name="c2brown" value="10">
+                            </div>
+                            
+                            <div class="brown-square">
+                                <input type="checkbox" name="c3brown" value="3">
+                            </div>
+                            
                         </div>
                         <div>
-                            <input type="checkbox" name="c1white" value="19">
-                            <input type="checkbox" name="c2white" value="11">
-                            <input type="checkbox" name="c3white" value="4">
+                            <div class="white-square">
+                                <input type="checkbox" name="c1white" value="19">
+                            </div>
+                            
+                            <div class="white-square">
+                                <input type="checkbox" name="c2white" value="11">
+                            </div>
+                            
+                            <div class="white-square">
+                                <input type="checkbox" name="c3white" value="4">
+                            </div>
+                            
                         </div>
                         <div>
-                            <input type="checkbox" name="c1green" value="20">
-                            <input type="checkbox" name="c2green" value="12">
-                            <input type="checkbox" name="c3green" value="5">
+                            <div class="green-square">
+                                <input type="checkbox" name="c1green" value="20">
+                            </div>
+                            
+                            <div class="green-square">
+                                <input type="checkbox" name="c2green" value="12">
+                            </div>
+                            
+                            <div class="green-square">
+                                <input type="checkbox" name="c3green" value="5">
+                            </div>
+                            
                         </div>
                         <div>
-                            <input type="checkbox" name="c1purple" value="22">
-                            <input type="checkbox" name="c2purple" value="13">
-                            <input type="checkbox" name="c3purple" value="6">
+                            <div class="purple-square">
+                                <input type="checkbox" name="c1purple" value="22">
+                            </div>
+                            
+                            <div class="purple-square">
+                                <input type="checkbox" name="c2purple" value="13">
+                            </div>
+                            
+                            <div class="purple-square">
+                                <input type="checkbox" name="c3purple" value="6">
+                            </div>
+                            
                         </div>
+                    </div> 
+                    <!--Wall-->  
+                    <div class="wall">
+                        <label for="wall-blue">Biggest wall:</label>  
+                        <input type="number" id="wall-blue">  
                     </div>                    
                 </div>
         </section>
