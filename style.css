@@ -262,6 +262,22 @@ label{
     padding: 3px;
 }
 
+input[type="checkbox"]{
+    display: none;
+} 
+
+.wall{
+    padding: 10px;
+}
+
+.wall label{
+    color: var(--color-text);
+}
+
+.wall input{
+    width: 50px;
+}
+
 /* Footer*/
 footer{
     text-align: center;

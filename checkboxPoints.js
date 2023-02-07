@@ -268,7 +268,7 @@ let removePreviousPoints = function (color,name) {
 // Assign points
 function showSelected(e) {
     console.log(e)
-    switch(e.srcElement.parentElement.parentElement.parentElement.id) {
+    switch(e.srcElement.parentElement.parentElement.parentElement.parentElement.id) {
         case "bluePlayerRow":
             bluePoints[e.srcElement.name] = Number(e.target.defaultValue);
             removePreviousPoints("blue",e.srcElement.name);
