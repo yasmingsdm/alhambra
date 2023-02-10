@@ -251,13 +251,6 @@ let totalPoints = function(points) {
     return total;
 }
 
-// EventListener for all points input
- 
-const radioButtonsABlue = document.querySelectorAll(".points input[type=checkbox]");
-for(const radioButtonABlue of radioButtonsABlue){
-    radioButtonABlue.addEventListener("change", showSelected);
-} 
-
 //EventListener for wall points
 
 const wallTotals = document.querySelectorAll(".points input[type=number]")
@@ -298,6 +291,12 @@ function wallPoints(event) {
     }
 }
 
+// EventListener for all points input
+ 
+const radioButtonsABlue = document.querySelectorAll(".points input[type=checkbox]");
+for(const radioButtonABlue of radioButtonsABlue){
+    radioButtonABlue.addEventListener("change", showSelected);
+} 
 
 // Remove points
 let removePreviousPoints = function (color,name) {
