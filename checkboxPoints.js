@@ -37,6 +37,7 @@ const bluePoints = {
     c3white: 0,
     c3green: 0,
     c3purple: 0,
+    wall:0
 };
 
 const whitePoints = {
@@ -76,6 +77,7 @@ const whitePoints = {
     c3white: 0,
     c3green: 0,
     c3purple: 0,
+    wall:0
 };
 
 const orangePoints = {
@@ -115,6 +117,7 @@ const orangePoints = {
     c3white: 0,
     c3green: 0,
     c3purple: 0,
+    wall:0
 };
 
 const yellowPoints = {
@@ -154,6 +157,7 @@ const yellowPoints = {
     c3white: 0,
     c3green: 0,
     c3purple: 0,
+    wall:0
 };
 
 const greenPoints = {
@@ -193,6 +197,7 @@ const greenPoints = {
     c3white: 0,
     c3green: 0,
     c3purple: 0,
+    wall:0
 };
 
 const redPoints = {
@@ -232,6 +237,7 @@ const redPoints = {
     c3white: 0,
     c3green: 0,
     c3purple: 0,
+    wall:0
 };
 
 
@@ -246,11 +252,52 @@ let totalPoints = function(points) {
 }
 
 // EventListener for all points input
-
-const radioButtonsABlue = document.querySelectorAll(".points input");
+ 
+const radioButtonsABlue = document.querySelectorAll(".points input[type=checkbox]");
 for(const radioButtonABlue of radioButtonsABlue){
     radioButtonABlue.addEventListener("change", showSelected);
+} 
+
+//EventListener for wall points
+
+const wallTotals = document.querySelectorAll(".points input[type=number]")
+for(const wallTotal of  wallTotals){
+    wallTotal.addEventListener("change", wallPoints);
 }
+
+function wallPoints(event) {
+    console.log(event)
+    switch(event.srcElement.parentElement.parentElement.id){
+    case "bluePlayerRow":
+            console.log(event);
+            bluePoints.wall = Number(event.target.value);
+            document.getElementById("totalblue").innerHTML = totalPoints(bluePoints);
+            break;
+        case "whitePlayerRow":
+            whitePoints.wall = Number(event.target.value);
+            document.getElementById("totalwhite").innerHTML = totalPoints(whitePoints);
+            break;
+        case "orangePlayerRow":
+            orangePoints.wall = Number(event.target.value);
+            document.getElementById("totalorange").innerHTML = totalPoints(orangePoints);
+            break;
+        case "yellowPlayerRow":
+            yellowPoints.wall = Number(event.target.value);
+            document.getElementById("totalyellow").innerHTML = totalPoints(yellowPoints);
+            break;
+        case "greenPlayerRow":
+            greenPoints.wall = Number(event.target.value);
+            document.getElementById("totalgreen").innerHTML = totalPoints(greenPoints);
+            break;
+        case "redPlayerRow":
+            redPoints.wall = Number(event.target.value);
+            document.getElementById("totalred").innerHTML = totalPoints(redPoints);
+            break;
+        default:
+            alert("Something went terribly wrong")
+    }
+}
+
 
 // Remove points
 let removePreviousPoints = function (color,name) {
@@ -261,45 +308,42 @@ let removePreviousPoints = function (color,name) {
             let idSelector = "total" + otherPlayers[i];
             document.getElementById(idSelector).innerHTML = totalPoints(eval(selector));
         }
-        console.log(bluePoints);
-        console.log(whitePoints);
 }
 
 // Assign points
-function showSelected(e) {
-    console.log(e)
-    switch(e.srcElement.parentElement.parentElement.parentElement.parentElement.id) {
+function showSelected(event) {
+    switch(event.srcElement.parentElement.parentElement.parentElement.parentElement.id) {
         case "bluePlayerRow":
-            bluePoints[e.srcElement.name] = Number(e.target.defaultValue);
-            removePreviousPoints("blue",e.srcElement.name);
+            bluePoints[event.srcElement.name] = Number(event.target.defaultValue);
+            removePreviousPoints("blue",event.srcElement.name);
             document.getElementById("totalblue").innerHTML = totalPoints(bluePoints);
             break;
         case "whitePlayerRow":
-            whitePoints[e.srcElement.name] = Number(e.target.defaultValue);
-            removePreviousPoints("white",e.srcElement.name);
+            whitePoints[event.srcElement.name] = Number(event.target.defaultValue);
+            removePreviousPoints("white",event.srcElement.name);
             document.getElementById("totalwhite").innerHTML = totalPoints(whitePoints);
             break;
         case "orangePlayerRow":
-            orangePoints[e.srcElement.name] = Number(e.target.defaultValue);
-            removePreviousPoints("orange",e.srcElement.name);
+            orangePoints[event.srcElement.name] = Number(event.target.defaultValue);
+            removePreviousPoints("orange",event.srcElement.name);
             document.getElementById("totalorange").innerHTML = totalPoints(orangePoints);
             break;
         case "yellowPlayerRow":
-            yellowPoints[e.srcElement.name] = Number(e.target.defaultValue);
-            removePreviousPoints("yellow",e.srcElement.name);
+            yellowPoints[event.srcElement.name] = Number(event.target.defaultValue);
+            removePreviousPoints("yellow",event.srcElement.name);
             document.getElementById("totalyellow").innerHTML = totalPoints(yellowPoints);
             break;
         case "greenPlayerRow":
-            greenPoints[e.srcElement.name] = Number(e.target.defaultValue);
-            removePreviousPoints("green",e.srcElement.name);
+            greenPoints[event.srcElement.name] = Number(event.target.defaultValue);
+            removePreviousPoints("green",event.srcElement.name);
             document.getElementById("totalgreen").innerHTML = totalPoints(greenPoints);
             break;
         case "redPlayerRow":
-            redPoints[e.srcElement.name] = Number(e.target.defaultValue);
-            removePreviousPoints("red",e.srcElement.name);
+            redPoints[event.srcElement.name] = Number(event.target.defaultValue);
+            removePreviousPoints("red",event.srcElement.name);
             document.getElementById("totalred").innerHTML = totalPoints(redPoints);
             break;
         default:
             alert("Something went terribly wrong")
     }
-}
+} 
