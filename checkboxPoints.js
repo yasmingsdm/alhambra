@@ -969,7 +969,7 @@ let updatePreviousPoints = function (name,value) {
 // Assign points
 function showSelected(event) {
     if (!event.srcElement.checked) {
-        switch(event.srcElement.parentElement.parentElement.parentElement.parentElement.id) {
+        switch(event.srcElement.parentElement.parentElement.parentElement.parentElement.parentElement.id) {
             case "bluePlayerRow":
                 bluePoints[event.srcElement.name].status = false;
                 bluePoints[event.srcElement.name].value = 0;
@@ -1000,7 +1000,7 @@ function showSelected(event) {
         updatePreviousPoints(event.srcElement.name,Number(event.target.defaultValue));
         event.srcElement.parentElement.parentElement.classList.replace("checked","unchecked")
     } else {
-    switch(event.srcElement.parentElement.parentElement.parentElement.parentElement.id) {
+    switch(event.srcElement.parentElement.parentElement.parentElement.parentElement.parentElement.id) {
         case "bluePlayerRow":
             bluePoints[event.srcElement.name].status = true;
             break;
