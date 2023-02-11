@@ -56,23 +56,35 @@ function showSelected(e) {
     const columnA = document.getElementsByClassName("a-column");
     const columnB = document.getElementsByClassName("b-column");
     const columnC = document.getElementsByClassName("c-column");
+    const walls = document.getElementsByClassName("wall");
     if (this.checked && this.value === "a") {
        for (let i = 0; i < columnA.length; i++) {
-            columnA[i].classList.replace("hide","column-a")
-            columnB[i].classList.replace("column-b","hide")
-            columnC[i].classList.replace("column-c","hide")
+            columnA[i].classList.replace("hide","column-a");
+            columnB[i].classList.replace("column-b","hide");
+            columnC[i].classList.replace("column-c","hide");
+            walls[i].classList.replace("show","hide")
        }
     } else if (this.checked && this.value === "b") {
         for (let i = 0; i < columnA.length; i++) {
-            columnA[i].classList.replace("column-a","hide")
-            columnB[i].classList.replace("hide","column-b")
-            columnC[i].classList.replace("column-c","hide")
+            columnA[i].classList.replace("column-a","hide");
+            columnB[i].classList.replace("hide","column-b");
+            columnC[i].classList.replace("column-c","hide");
+            walls[i].classList.replace("show","hide")
+       }
+    } else if (this.checked && this.value === "c") {
+        for (let i = 0; i < columnA.length; i++) {
+            columnA[i].classList.replace("column-a","hide");
+            columnB[i].classList.replace("column-b","hide");
+            columnC[i].classList.replace("hide","column-c");
+            walls[i].classList.replace("show","hide")
        }
     } else {
         for (let i = 0; i < columnA.length; i++) {
-            columnA[i].classList.replace("column-a","hide")
-            columnB[i].classList.replace("column-b","hide")
-            columnC[i].classList.replace("hide","column-c")
+            columnA[i].classList.replace("column-a","hide");
+            columnB[i].classList.replace("column-b","hide");
+            columnC[i].classList.replace("column-c","hide");
+            walls[i].classList.replace("hide","show")
        }
+
     }
 }
