@@ -1,5 +1,5 @@
 const playerList = ["blue", "white", "orange", "yellow", "green", "red"];
-const pointsColors = ["blue", "red", "brown", "white" , "green" , "purple"];
+
 const bluePoints = {
     ablue: {
         status: false,
@@ -997,7 +997,6 @@ function showSelected(event) {
             default:
                 alert("Something went terribly wrong")
         }
-        updatePreviousPoints(event.srcElement.name,Number(event.target.defaultValue));
         event.srcElement.parentElement.parentElement.classList.replace("checked","unchecked")
     } else {
     switch(event.srcElement.parentElement.parentElement.parentElement.parentElement.parentElement.id) {
@@ -1022,9 +1021,9 @@ function showSelected(event) {
         default:
             alert("Something went terribly wrong")
     }
-    updatePreviousPoints(event.srcElement.name,Number(event.target.defaultValue));
     event.srcElement.parentElement.parentElement.classList.replace("unchecked","checked")
     }   
+    updatePreviousPoints(event.srcElement.name,Number(event.target.defaultValue));
 } 
 
 

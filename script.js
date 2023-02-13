@@ -107,5 +107,4 @@ function showSelected(e) {
        radioB.classList.remove("checked-radio");
        radioC.classList.remove("checked-radio");
     }
-    console.log(e)
 }

@@ -122,6 +122,7 @@ h2{
     display: flex;
     border-radius: 3px;
     background-color: var(--color-text);
+    gap: 0.5em;
 }
 
 #phases div {
