@@ -87,70 +87,122 @@ h2{
 .blue{
     background-color: var(--blue);
 }
-
 .white{
     background-color: var(--white);
 }
-
 .green{
     background-color: var(--green);
 }
-
 .red{
     background-color: var(--red);
 }
-
 .orange{
     background-color: var(--orange);
 }
-
 .yellow{
     background-color: var(--yellow);
 }
-
+.brown{
+    background-color: var(--brown);
+}
+.purple{
+    background-color: var(--purple);
+}
 
 /* Phase selectors */
 
 .phase-container {
     display: flex;
     justify-content: center;
-}
-.phase-container div {
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: start;
-    width: 50px;
     align-items: center;
-    font-size: 1.5em;
+    flex-wrap: wrap;
+}
+
+#phases {
+    display: flex;
+    border-radius: 3px;
+    background-color: var(--color-text);
+}
+
+#phases div {
+    padding:0.25em 0.125em;
+}
+
+#phases label {
+    font-size: 1.5rem;
+}
+
+#phases input {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+.checked-radio {
+    background-color: var(--background-2);
+    border-radius: 3px;
+    color: var(--color-text);
 }
 
 /*Points*/
 
-.scores > div {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 2px;
-}
-.scores > div > button{
-width: 90%;
-}
-
-.hide {
-    display: none;
+.scores {
+    text-align: center;
 }
 
 .column-a {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 0.25rem;
 }
+
+.column-a > div {
+    width: 99%;
+    height: 2em;
+}
+
 .column-b {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 0.25rem;
 }
+
+.column-b > div {
+    display: flex;
+    justify-content: space-between;
+    gap:0.25rem;
+    width: 100%;
+}
+
+.column-b > div > div {
+    display: flex;
+    width: 48%;
+    height:2em;
+}
+
 .column-c {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 0.25rem;
 }
+
+.column-c > div {
+    display: flex;
+    justify-content: space-between;
+    gap:0.25rem;
+    width: 100%;
+}
+
+.column-c > div > div {
+    display: flex;
+    width: 31%;
+    height:2em;
+}
+
+
 .points{
     background-color: var(--background-2);
     display: flex;
@@ -160,21 +212,19 @@ width: 90%;
     padding-top: 20px;
 }
 
+.points label {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
 .point{
     border: 1px solid var(--color-text);
-    height: 40px;
-}
-
-
-.brown{
-    background-color: var(--brown);
-}
-
-.purple{
-    background-color: var(--purple);
+    height: 2rem;
 }
 
 .player-column {
+    width:12rem;
     margin-bottom: 1rem;
     border-radius:5px;
     padding:5px;
@@ -214,48 +264,29 @@ width: 90%;
 }
 
 .total-container {
-    width: 170px;
     text-align: center;
     font-size: 4em;
     font-weight: 800;
     text-shadow: 0px 0px 5px black;
 }
 
-.blue-square{
-    background-color: var(--blue);
-    height: 35px;
-    width: 35px;
+.point-box {
+    position: relative;
 }
 
-.red-square{
-    background-color: var(--red);
-    height: 35px;
-    width: 35px;
+.unchecked {
+    opacity: 0.7;
+    border: 2px outset black;
 }
 
-.brown-square{
-    background-color: var(--brown);
-    height: 35px;
-    width: 35px;
+.checked {
+    opacity: 1;
+    border: 5px inset black;
 }
 
-.white-square{
-    background-color: var(--white);
-    height: 35px;
-    width: 35px;
-}
-
-.green-square{
-    background-color: var(--green);
-    height: 35px;
-    width: 35px;
-}
-
-.purple-square{
-    background-color: var(--purple);
-    height: 35px;
-    width: 35px;
-}
+.point-box input {
+    opacity: 0;
+  }
 
 label{
     color:var(--background-1);
@@ -267,15 +298,22 @@ input[type="checkbox"]{
 } 
 
 .wall{
-    padding: 10px;
+    font-size: 1.25rem;
+    padding-bottom: 1em;
 }
 
 .wall label{
     color: var(--color-text);
+    height: inherit;
+    width: fit-content;
+    margin: auto;
 }
 
 .wall input{
+    display: block;
+    font-size: 1.25rem;
     width: 50px;
+    margin: auto;
 }
 
 /* Footer*/
@@ -290,4 +328,10 @@ footer{
 
 a:hover{
     color:var(--green);
+}
+.hide {
+    display: none;
+}
+.show {
+    display: contents;
 }
