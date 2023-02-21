@@ -60,13 +60,11 @@ function showSelected(e) {
     const columnA = document.getElementsByClassName("a-column");
     const columnB = document.getElementsByClassName("b-column");
     const columnC = document.getElementsByClassName("c-column");
-    const walls = document.getElementsByClassName("wall");
     if (this.value === "a") {
        for (let i = 0; i < columnA.length; i++) {
             columnA[i].classList.replace("hide","column-a");
             columnB[i].classList.replace("column-b","hide");
             columnC[i].classList.replace("column-c","hide");
-            walls[i].classList.replace("hide","show")
        }
        this.parentElement.classList.add("checked-radio");
        radioB.classList.remove("checked-radio");
@@ -76,7 +74,6 @@ function showSelected(e) {
             columnA[i].classList.replace("column-a","hide");
             columnB[i].classList.replace("hide","column-b");
             columnC[i].classList.replace("column-c","hide");
-            walls[i].classList.replace("hide","show")
        }
        this.parentElement.classList.add("checked-radio");
        radioA.classList.remove("checked-radio");
@@ -86,7 +83,6 @@ function showSelected(e) {
             columnA[i].classList.replace("column-a","hide");
             columnB[i].classList.replace("column-b","hide");
             columnC[i].classList.replace("hide","column-c");
-            walls[i].classList.replace("hide","show")
        }
        this.parentElement.classList.add("checked-radio");
        radioB.classList.remove("checked-radio");

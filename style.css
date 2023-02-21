@@ -157,8 +157,12 @@ h2{
     align-items: center;
     gap: 0.25rem;
 }
+.column-a > div{
+    width: 100%;
 
-.column-a > div {
+}
+
+.column-a > div > div {
     width: 99%;
     height: 2em;
 }
