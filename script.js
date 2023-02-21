@@ -56,7 +56,6 @@ function showSelected(e) {
     const radioA = document.getElementById("radio-label-phasea"); 
     const radioB = document.getElementById("radio-label-phaseb"); 
     const radioC = document.getElementById("radio-label-phasec"); 
-    const radioWall = document.getElementById("radio-label-phasewall"); 
 
     const columnA = document.getElementsByClassName("a-column");
     const columnB = document.getElementsByClassName("b-column");
@@ -67,44 +66,30 @@ function showSelected(e) {
             columnA[i].classList.replace("hide","column-a");
             columnB[i].classList.replace("column-b","hide");
             columnC[i].classList.replace("column-c","hide");
-            walls[i].classList.replace("show","hide")
+            walls[i].classList.replace("hide","show")
        }
        this.parentElement.classList.add("checked-radio");
        radioB.classList.remove("checked-radio");
        radioC.classList.remove("checked-radio");
-       radioWall.classList.remove("checked-radio");
     } else if (this.value === "b") {
         for (let i = 0; i < columnA.length; i++) {
             columnA[i].classList.replace("column-a","hide");
             columnB[i].classList.replace("hide","column-b");
             columnC[i].classList.replace("column-c","hide");
-            walls[i].classList.replace("show","hide")
-       }
-       this.parentElement.classList.add("checked-radio");
-       radioA.classList.remove("checked-radio");
-       radioC.classList.remove("checked-radio");
-       radioWall.classList.remove("checked-radio");
-    } else if (this.value === "c") {
-        for (let i = 0; i < columnA.length; i++) {
-            columnA[i].classList.replace("column-a","hide");
-            columnB[i].classList.replace("column-b","hide");
-            columnC[i].classList.replace("hide","column-c");
-            walls[i].classList.replace("show","hide")
-       }
-       this.parentElement.classList.add("checked-radio");
-       radioB.classList.remove("checked-radio");
-       radioA.classList.remove("checked-radio");
-       radioWall.classList.remove("checked-radio");
-    } else {
-        for (let i = 0; i < columnA.length; i++) {
-            columnA[i].classList.replace("column-a","hide");
-            columnB[i].classList.replace("column-b","hide");
-            columnC[i].classList.replace("column-c","hide");
             walls[i].classList.replace("hide","show")
        }
        this.parentElement.classList.add("checked-radio");
        radioA.classList.remove("checked-radio");
-       radioB.classList.remove("checked-radio");
        radioC.classList.remove("checked-radio");
-    }
+    } else {
+        for (let i = 0; i < columnA.length; i++) {
+            columnA[i].classList.replace("column-a","hide");
+            columnB[i].classList.replace("column-b","hide");
+            columnC[i].classList.replace("hide","column-c");
+            walls[i].classList.replace("hide","show")
+       }
+       this.parentElement.classList.add("checked-radio");
+       radioB.classList.remove("checked-radio");
+       radioA.classList.remove("checked-radio");
+    } 
 }
