@@ -145,10 +145,18 @@ const bluePoints = {
         status: false,
         value: 0
     },
-    wall:{
+    wall__a:{
         status: false,
         value: 0
     },
+    wall__b:{
+        status: false,
+        value: 0
+    },
+    wall__c:{
+        status: false,
+        value: 0
+    }
 };
 
 const whitePoints = {
@@ -296,10 +304,18 @@ const whitePoints = {
         status: false,
         value: 0,
     },
-    wall: {
+    wall__a:{
         status: false,
-        value: 0,
+        value: 0
     },
+    wall__b:{
+        status: false,
+        value: 0
+    },
+    wall__c:{
+        status: false,
+        value: 0
+    }
 };
 
 const orangePoints = {
@@ -447,10 +463,18 @@ const orangePoints = {
         status: false,
         value: 0
     },
-    wall:{
+    wall__a:{
         status: false,
         value: 0
     },
+    wall__b:{
+        status: false,
+        value: 0
+    },
+    wall__c:{
+        status: false,
+        value: 0
+    }
 };
 
 const yellowPoints = {
@@ -598,10 +622,18 @@ const yellowPoints = {
         status: false,
         value: 0
     },
-    wall:{
+    wall__a:{
         status: false,
         value: 0
     },
+    wall__b:{
+        status: false,
+        value: 0
+    },
+    wall__c:{
+        status: false,
+        value: 0
+    }
 };
 
 const greenPoints = {
@@ -749,10 +781,18 @@ const greenPoints = {
         status: false,
         value: 0
     },
-    wall:{
+    wall__a:{
         status: false,
         value: 0
     },
+    wall__b:{
+        status: false,
+        value: 0
+    },
+    wall__c:{
+        status: false,
+        value: 0
+    }
 };
 
 const redPoints = {
@@ -900,11 +940,38 @@ const redPoints = {
         status: false,
         value: 0
     },
-    wall: {
+    wall__a:{
         status: false,
         value: 0
     },
+    wall__b:{
+        status: false,
+        value: 0
+    },
+    wall__c:{
+        status: false,
+        value: 0
+    }
 };
+
+ const last = {
+    blue: 1,
+    red: 2,
+    brown: 3,
+    white: 4, 
+    green: 5,
+    purple: 6
+ }
+ const middle = {
+    blue: 8,
+    red: 9,
+    brown: 10,
+    white: 11, 
+    green: 12,
+    purple: 13
+ }
+
+
 
 
 // Sum of the points of one player
@@ -918,24 +985,25 @@ for(const wallTotal of  wallTotals){
 }
 
 function wallPoints(event) {
-    switch(event.srcElement.parentElement.parentElement.id){
+    let letter = "wall__" + event.target.id.slice(-1);
+    switch(event.srcElement.parentElement.parentElement.parentElement.id){
     case "bluePlayerRow":
-            bluePoints.wall.value = Number(event.target.value);
+            bluePoints[letter].value = Number(event.target.value);
             break;
         case "whitePlayerRow":
-            whitePoints.wall.value = Number(event.target.value);
+            whitePoints[letter].value = Number(event.target.value);
             break;
         case "orangePlayerRow":
-            orangePoints.wall.value = Number(event.target.value);
+            orangePoints[letter].value = Number(event.target.value);
             break;
         case "yellowPlayerRow":
-            yellowPoints.wall.value = Number(event.target.value);
+            yellowPoints[letter].value = Number(event.target.value);
             break;
         case "greenPlayerRow":
-            greenPoints.wall.value = Number(event.target.value);
+            greenPoints[letter].value = Number(event.target.value);
             break;
         case "redPlayerRow":
-            redPoints.wall.value = Number(event.target.value);
+            redPoints[letter].value = Number(event.target.value);
             break;
         default:
             alert("Something went terribly wrong")
@@ -967,6 +1035,7 @@ let updatePreviousPointsA = function (name,value) {
 }
 // Update points for coulmn B
 let updatePreviousPointsB = function (name,value) {
+    let pointsColor = name.slice(2);
     let playersWithPoints1 = [];
     let playersWithPoints2 = [];
         if (name.charAt(1)==1) {
@@ -978,7 +1047,7 @@ let updatePreviousPointsB = function (name,value) {
                 }
             }
             if (playersWithPoints1.length > 1) {
-                let valueForTie = value + 20 //To be corrected
+                let valueForTie = value + last[pointsColor]
                 for (let i = 0 ; i < playersWithPoints1.length ; i++) {
                     eval(playersWithPoints1[i]).value = Math.floor(valueForTie / playersWithPoints1.length);
                 }
@@ -1008,25 +1077,25 @@ let updatePreviousPointsB = function (name,value) {
                 }
         } if (playersWithPoints1.length > 1) {
             alert(`There are multiple players at the first place for points for ${name.slice(2)}. Please remove the assigned players for second placasdasdasdasde`)
-        } else {
-            for (let i = 0 ; i < playerList.length ; i++) {
-                let selector = playerList[i] + "Points."+name+".status";
-                if (eval(selector) === true) {
-                    let nextPlayer = playerList[i] + "Points."+name;
-                    playersWithPoints2.push(nextPlayer);
-                }
+            } 
+        for (let i = 0 ; i < playerList.length ; i++) {
+            let selector = playerList[i] + "Points."+name+".status";
+            if (eval(selector) === true) {
+                let nextPlayer = playerList[i] + "Points."+name;
+                playersWithPoints2.push(nextPlayer);
             }
-                for (let i = 0 ; i < playersWithPoints2.length ; i++) {
-                    console.log(value)
-                        eval(playersWithPoints2[i]).value = Math.floor(value / playersWithPoints2.length);
-                }
+        }
+            for (let i = 0 ; i < playersWithPoints2.length ; i++) {
+                console.log(value)
+                    eval(playersWithPoints2[i]).value = Math.floor(value / playersWithPoints2.length);
+            }
     }
-}
-        totalPoints();
+    totalPoints();
 }
 
 // Update points for coulmn C
 let updatePreviousPointsC = function (name,value) {
+    let pointsColor = name.slice(2);
     let playersWithPoints1 = [];
     let playersWithPoints2 = [];
     let playersWithPoints3 = [];
@@ -1039,7 +1108,7 @@ let updatePreviousPointsC = function (name,value) {
                 }
             }
             if (playersWithPoints1.length > 2) {
-                let valueForTie = value + 50 //To be corrected
+                let valueForTie = value + middle[pointsColor] + last[pointsColor] 
                 for (let i = 0 ; i < playersWithPoints1.length ; i++) {
                     eval(playersWithPoints1[i]).value = Math.floor(valueForTie / playersWithPoints1.length);
                 }
@@ -1059,7 +1128,7 @@ let updatePreviousPointsC = function (name,value) {
                     }
                 }
             } else if (playersWithPoints1.length === 2) {
-                let valueForTie = value + 20 //To be corrected
+                let valueForTie = value + middle[pointsColor] 
                 for (let i = 0 ; i < playersWithPoints1.length ; i++) {
                     eval(playersWithPoints1[i]).value = Math.floor(valueForTie / playersWithPoints1.length);
                 }
@@ -1088,34 +1157,33 @@ let updatePreviousPointsC = function (name,value) {
                     playersWithPoints1.push(nextPlayer);
                 }
             }
-            if (playersWithPoints1.length >= 2) {
+            if (playersWithPoints1.length > 1) {
                 alert(`There are multiple players at the first place for points for ${name.slice(2)}. Please remove the assigned players for second place`)
-            } else {
+            }
+            for (let i = 0 ; i < playerList.length ; i++) {
+                let selector = playerList[i] + "Points."+name+".status";
+                if (eval(selector) === true) {
+                    let nextPlayer = playerList[i] + "Points."+name;
+                    playersWithPoints2.push(nextPlayer);
+                }
+            }
+            if (playersWithPoints2.length > 1) {
+                let thirdPlace = "c3"+name.slice(2)
                 for (let i = 0 ; i < playerList.length ; i++) {
-                    let selector = playerList[i] + "Points."+name+".status";
+                    let selector = playerList[i] + "Points."+thirdPlace+".status";
                     if (eval(selector) === true) {
-                        let nextPlayer = playerList[i] + "Points."+name;
-                        playersWithPoints2.push(nextPlayer);
+                        alert(`There are multiple players at the first place for points for ${name.slice(2)}. Please remove the assigned players for second place`)
+                    break;
                     }
                 }
-                if (playersWithPoints2.length > 1) {
-                    let thirdPlace = "c3"+name.slice(2)
-                    for (let i = 0 ; i < playerList.length ; i++) {
-                        let selector = playerList[i] + "Points."+thirdPlace+".status";
-                        if (eval(selector) === true) {
-                            alert(`There are multiple players at the first place for points for ${name.slice(2)}. Please remove the assigned players for second place`)
-                        break;
-                        }
-                    }
-                    let valueForTie = value + 20 //To be corrected
-                    for (let i = 0 ; i < playersWithPoints2.length ; i++) {
-                    eval(playersWithPoints2[i]).value = Math.floor(valueForTie / playersWithPoints2.length);
-                }
+                let valueForTie = value + last[pointsColor] 
+                for (let i = 0 ; i < playersWithPoints2.length ; i++) {
+                eval(playersWithPoints2[i]).value = Math.floor(valueForTie / playersWithPoints2.length);
+            }
                 } else {
                     for (let i = 0 ; i < playersWithPoints2.length ; i++) {
                         eval(playersWithPoints2[i]).value = value
                 }
-            }
             }
             playersWithPoints1 = [];
             playersWithPoints2 = [];
@@ -1139,18 +1207,16 @@ let updatePreviousPointsC = function (name,value) {
             }
             if (playersWithPoints1.length > 2 || playersWithPoints2.length > 1){
             alert(`There are multiple players at the first place for points for ${name.slice(2)}. Please remove the assigned players for second place`)
-            } else {
-                for (let i = 0 ; i < playerList.length ; i++) {
-                    let selector = playerList[i] + "Points."+name+".status";
-                    if (eval(selector) === true) {
-                        let nextPlayer = playerList[i] + "Points."+name;
-                        playersWithPoints3.push(nextPlayer);
-                        }
+            }
+            for (let i = 0 ; i < playerList.length ; i++) {
+                let selector = playerList[i] + "Points."+name+".status";
+                if (eval(selector) === true) {
+                    let nextPlayer = playerList[i] + "Points."+name;
+                    playersWithPoints3.push(nextPlayer);
                     }
-                let valueForTie = value + 20 //To be corrected
-                for (let i = 0 ; i < playersWithPoints3.length ; i++) {
-                eval(playersWithPoints3[i]).value = Math.floor(valueForTie / playersWithPoints3.length);
                 }
+            for (let i = 0 ; i < playersWithPoints3.length ; i++) {
+            eval(playersWithPoints3[i]).value = Math.floor(value / playersWithPoints3.length);
             }
         }
         playersWithPoints1 = [];
@@ -1162,6 +1228,7 @@ let updatePreviousPointsC = function (name,value) {
 
 // Remove points
 function showSelected(event) {
+    console.log(event)
     if (!event.srcElement.checked) {
         switch(event.srcElement.parentElement.parentElement.parentElement.parentElement.parentElement.id) {
             case "bluePlayerRow":
